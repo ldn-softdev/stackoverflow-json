@@ -1,5 +1,5 @@
 ### Query: [create array of object in json and insert the new object each time bash scripts executes](https://stackoverflow.com/questions/59986903/jq-create-array-of-object-in-json-and-insert-the-new-object-each-time-bash-scri)
-(jump to the answer)
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/create%20array%20of%20object%20in%20json%20and%20insert%20the%20new%20object%20each%20time%20bash%20scripts%20executes.md#a))
 
 I want to create valid json using jq in bash.
 each time when bash script will execute "Add new element to existing JSON array  "  and if file is empty create new file.
