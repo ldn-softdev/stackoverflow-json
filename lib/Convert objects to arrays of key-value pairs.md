@@ -1,5 +1,6 @@
 ### Query: [Convert objects to arrays of key-value pairs](https://stackoverflow.com/questions/59974811/convert-objects-to-arrays-of-key-value-pairs)
-(jump to the answer)
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Convert%20objects%20to%20arrays%20of%20key-value%20pairs.md#a))
+
 I have a file where every line is a json (not formatted) as follows:
 ```
 {
