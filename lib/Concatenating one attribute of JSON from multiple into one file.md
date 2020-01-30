@@ -128,7 +128,9 @@ so, once it's fixed:
 [`jtc`](https://github.com/ldn-softdev/jtc) 
 based solution: read relevant (`"messages":`) from _all the files_ and then replace those in the 1st file:
 ```
-bash $ jtc -Jw'<messages>l[:]' / -w'<J>v' -u message_1.json / -w'<messages>l' -u0 -T'{{J}}' -tc message_*.json
+bash $ jtc -Jw'<messages>l[:]' /\
+           -w'<J>v' -u message_1.json /\
+           -w'<messages>l' -u0 -T'{{J}}' -tc message_*.json
 {
    "is_still_participant": true,
    "messages": [
