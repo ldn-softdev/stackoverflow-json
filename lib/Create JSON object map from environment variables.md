@@ -1,5 +1,5 @@
 ### Query: [Create JSON object map from environment variables](https://stackoverflow.com/questions/59985760/jq-create-json-object-map-from-environment-variables)
-(jump to the answer)
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Create%20JSON%20object%20map%20from%20environment%20variables.md#a))
 
 I am using jq 1.5 and trying to pass two environment variables via jq to create a json object:
 
