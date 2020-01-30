@@ -1,5 +1,5 @@
-### [reformat objects to be tsv-formatted making table from json data](https://stackoverflow.com/questions/59973594/jq-object-cannot-be-tsv-formatted-only-array-error-when-making-table-from-jso)
-(jump to the answer)
+### Query: [reformat objects to be tsv-formatted making table from json data](https://stackoverflow.com/questions/59973594/jq-object-cannot-be-tsv-formatted-only-array-error-when-making-table-from-jso)
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/reformat%20objects%20to%20be%20tsv-formatted%20making%20table%20from%20json%20data.md#a))
 
 My script creates a json data set and then tries to present it as a table. 
 
