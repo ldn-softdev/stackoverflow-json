@@ -120,3 +120,34 @@ messages.json
 I have 11 JSON files, message_1.json, ..., message_11.json. I would like to merge them all into one ```messages.json``` file of this form containing **all of the messages** across the JSON files. How can I do this using ```jq``` via bash?
 
 
+### A:
+`jtc` based solution: read relevant (`"messages":`) from _all the files_ and then replace those in the 1st file:
+```
+bash $ jtc -Jw'<messages>l[:]' / -w'<J>v' -u message_1.json / -w'<messages>l' -u0 -T'{{J}}' -tc message_*.json
+{
+   "is_still_participant": true,
+   "messages": [
+      { "content": "Text2.", "sender_name": "Person One", "timestamp_ms": 2, "type": "Generic" },
+      { "content": "Text1.", "sender_name": "Person Two", "timestamp_ms": 1, "type": "Generic" },
+      { "content": "Text4.", "sender_name": "Person Two", "timestamp_ms": 4, "type": "Generic" },
+      { "content": "Text3.", "sender_name": "Person One", "timestamp_ms": 3, "type": "Generic" }
+   ],
+   "participants": [
+      { "name": "Person One" },
+      { "name": "Person Two" }
+   ],
+   "thread_path": "inbox/SomeString",
+   "thread_type": "Regular",
+   "title": "Person One"
+}
+bash $ 
+```
+' - the above solution will only consume as much memory as requied to hold only `"messages"` from each file and does not require 
+specifying upfront any number of input files. 
+
+
+
+
+
+
+
