@@ -1,4 +1,5 @@
-### Q: [Concatenating one attribute of JSON from multiple into one file](https://stackoverflow.com/questions/59975714/concatenating-one-attribute-of-json-from-multiple-into-one-file-using-jq)
+### Query: [Concatenating one attribute of JSON from multiple into one file](https://stackoverflow.com/questions/59975714/concatenating-one-attribute-of-json-from-multiple-into-one-file-using-jq)
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Concatenating%20one%20attribute%20of%20JSON%20from%20multiple%20into%20one%20file.md#a))
 
 I have multiple JSON files that are of similar form, here are two examples:
 
@@ -146,7 +147,7 @@ bash $ jtc -Jw'<messages>l[:]' / -w'<J>v' -u message_1.json / -w'<messages>l' -u
 }
 bash $ 
 ```
-' - the above solution will only consume as much memory as requied to hold only `"messages"` from each file and does not require 
+\- the above solution will only consume as much memory as requied to hold only `"messages"` from each file and does not require 
 specifying upfront any number of input files. 
 
 
