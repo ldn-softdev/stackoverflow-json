@@ -9,3 +9,4 @@ forum:
 - [Create JSON object map from environment variables](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Create%20JSON%20object%20map%20from%20environment%20variables.md)
 - [Concatenating one attribute of JSON from multiple into one file](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Concatenating%20one%20attribute%20of%20JSON%20from%20multiple%20into%20one%20file.md)
 - [Convert objects to arrays of key-value pairs](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Convert%20objects%20to%20arrays%20of%20key-value%20pairs.md)
+- [reformat objects to be tsv-formatted making table from json data](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/reformat%20objects%20to%20be%20tsv-formatted%20making%20table%20from%20json%20data.md)
