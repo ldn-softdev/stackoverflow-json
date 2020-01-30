@@ -70,7 +70,7 @@ So I need a selector which works handling the possibility of a key to be missing
 
 ### A:
 [`jtc`](https://github.com/ldn-softdev/jtc)
-does not have a predefined template of function to auto-map objects to arrays with well-known keys, so such mapping 
+does not have a predefined template or a function to auto-map objects to arrays with well-known keys, so such mapping 
 has to be provided by user via a template:
 ```bash
 bash $ <test.json jtc -w'<httpReq|params|userAgent|userKeyDetails>L:' -i'{"":[]}' /\
