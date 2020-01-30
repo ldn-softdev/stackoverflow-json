@@ -5,4 +5,5 @@ using [`jtc`](https://github.com/ldn-softdev/jtc) tool. All questions are taken 
 [stackoverflow.com](https://stackoverflow.com/questions/tagged/jq%2bor%2bjson%2bbash?tab=Newest)
 forum:
 
+- [Create JSON object map from environment variables](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Create%20JSON%20object%20map%20from%20environment%20variables.md)
 - [Concatenating one attribute of JSON from multiple into one file](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Concatenating%20one%20attribute%20of%20JSON%20from%20multiple%20into%20one%20file.md)
