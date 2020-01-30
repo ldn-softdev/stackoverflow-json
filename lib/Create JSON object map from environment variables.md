@@ -64,7 +64,7 @@ the solution becomes feasible:
 bash $ export REGIONS='["region1","region2"]'
 bash $ export KMS_KEYS='["key1","key2"]'
 bash $ 
-bash $ <<<$REGIONS jtc -w'[:]<R>v' -mu"$KMS_KEYS" -u[:] -T'{"{R}":{{}}}' /\ 
+bash $ <<<$REGIONS jtc -w'[:]<R>v' -mu"$KMS_KEYS" -u[:] -T'{"{R}":{{}}}' /\
                        -llw[:] /\
                        -w'<J>v' -u test.json /\
                        -w[builders][0] -i0 -T'{"region_kms_key_ids":{{J}}}'
