@@ -121,7 +121,11 @@ I have 11 JSON files, message_1.json, ..., message_11.json. I would like to merg
 
 
 ### A:
-`jtc` based solution: read relevant (`"messages":`) from _all the files_ and then replace those in the 1st file:
+\- The above samples are _**invalid JSONs**_ (the JSON format does not admit numericals starting with leading `0`, e.g.: `0003`),
+so, once it's fixed:
+
+[`jtc`](https://github.com/ldn-softdev/jtc) 
+based solution: read relevant (`"messages":`) from _all the files_ and then replace those in the 1st file:
 ```
 bash $ jtc -Jw'<messages>l[:]' / -w'<J>v' -u message_1.json / -w'<messages>l' -u0 -T'{{J}}' -tc message_*.json
 {
