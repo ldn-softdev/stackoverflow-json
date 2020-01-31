@@ -58,7 +58,7 @@ fhlb-test	c04	10.244.7.20	49846	129.98.76.543	22	129.87.65.432	23698
 bash $ 
 ```
 
-If there's a requirement to add a header, it could be done using a an additional template:
+If there's a requirement to add a header, it could be done using an additional template:
 ```bash
 bash $ <file.json jtc -J / -nw' ' -T'"NAME\tNODE\tSOURCE IP\tSOURCE PORT\tDESTINATION IP\tDESTINATION PORT\t GATEWAY IP\tGATEWAY PORT"' -w'<host>l:' -qqT'"{$c}\t{$d}\t{$g}\t{$h}\t{$a}\t{$b}\t{$e}\t{$f}"'
 ```
