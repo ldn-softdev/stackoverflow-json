@@ -1,5 +1,5 @@
 ### Query: [Retrieve value of odata-id with jq in Redfish output](https://stackoverflow.com/questions/59959364/retrieve-value-of-odata-id-with-jq-in-redfish-output)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Retrieve%20value%20of%20odata-id%20with%20jq%20in%20Redfish%20output.md#a))
 
 I'm parsing some json Redfish data using jq. 
 
