@@ -5,6 +5,7 @@ using [`jtc`](https://github.com/ldn-softdev/jtc) tool. All questions are taken 
 [stackoverflow.com](https://stackoverflow.com/questions/tagged/jq%2bor%2bjson%2bbash?tab=Newest)
 forum:
 
+- [How to group by in jq?](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20group%20by%20in%20jq.md)
 - [JQ getting compile error response from query](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/JQ%20getting%20compile%20error%20response%20from%20query.md)
 - [jq: create array of object in json and insert the new object each time bash scripts executes](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/create%20array%20of%20object%20in%20json%20and%20insert%20the%20new%20object%20each%20time%20bash%20scripts%20executes.md)
 - [jq - Create JSON object map from environment variables](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Create%20JSON%20object%20map%20from%20environment%20variables.md)
@@ -16,4 +17,3 @@ forum:
 - [Print empty string for a missing key and converting the result to CSV](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Print%20empty%20string%20for%20a%20missing%20key%20and%20converting%20the%20result%20to%20CSV.md)
 - [Retrieve value of @odata.id with jq in Redfish output](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Retrieve%20value%20of%20odata-id%20with%20jq%20in%20Redfish%20output.md)
 - [Jq to replace a word with in the json](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Jq%20to%20replace%20a%20word%20with%20in%20the%20json.md)
-- [How to group by in jq?](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20group%20by%20in%20jq.md)
