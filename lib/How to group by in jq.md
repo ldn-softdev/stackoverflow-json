@@ -113,16 +113,20 @@ bash $ <document.json jtc -w'<name>l:[-1]' -pi'<name>l:' -T'{"buckets":[{"name":
 bash $ 
 ```
 
-Another (alternativeo) solution, is to do in 4 steps:
-1. merge-insert bucket's names from all duplicate `cluster`s into each unique record
-2. extract all unique `cluster` records and wrap then into array
-3. transform all `bucket`s into `{"name": "bucket"}`
-4. rename top `"name"` labels into `"buckets"`
+However, after a bit of thinking, it's possible to provide a much better/concise solution in 2 steps only:
+1. transform each entry into object with the top lable of the cluster
+2. after merging objects by labels transform each record into a desired format
 ```bash
-bash $ <document.json jtc -w'[clusterName]:<C>Q:[^0]<C>s[-1][name]' -mi'[clusterName]:<>Q:[-1][name]' /\
-                          -jw'[clusterName]:<>q:[-1]' /\
-                          -w'<name>l:[:]<B>v' -u0 -T'{"name":{{B}}}' /\
-                          -w'[:][name]<>k' -u'"buckets"' -tc
+# 1. transform each entry into object with the top lable of the cluster:
+bash $ <document.json jtc -w'[:]' -T'{"{$a}":{"name":{{$b}}}}' -ll -tc
+"cluster1": { "name": "bucket1" }
+"cluster1": { "name": "bucket2" }
+"cluster2": { "name": "bucket3" }
+"cluster2": { "name": "bucket4" }
+bash $ 
+
+# 2: after merging objects by labels transform each record into a desired format:
+bash $ <document.json jtc -w'[:]' -T'{"{$a}":{"name":{{$b}}}}' -ll / -jw'[:]<L>k' -T'{"clusterName":{{L}}, "buckets":{{}}}' -tc
 [
    {
       "buckets": [
