@@ -113,7 +113,7 @@ bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"c
 bash $ 
 ```
 
-Another solution, probably a tiny-wee faster and shorter would be to do in 4 steps:
+Another solution, probably a bit shorter would be to do in 4 steps:
 1. merge-insert bucket's names from all duplicate `cluster`s into each unique record
 2. extract all unique `cluster` records and wrap then into array
 3. transform all `bucket`s into `{"name": "bucket"}`
