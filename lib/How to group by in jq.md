@@ -28,7 +28,7 @@ the first solution using [`jtc`](https://github.com/ldn-softdev/jtc) that imedia
 let's see it in steps:
 ```bash
 # 1. transform each record into the required by the output:
-bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"{$A}":{{$a}}, "buckets":[{"name":{{$b}}}]}' -tc
+bash $ <document.json jtc -w'<name>l:[-1]' -pi'<name>l:' -T'{"buckets":[{"name":{{}}}]}' -tc
 [
    {
       "buckets": [
@@ -58,41 +58,41 @@ bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"{
 bash $ 
 
 # 2. insert `"name"` records from each duplicae `cluster` into a first unique one:
-bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"{$A}":{{$a}}, "buckets":[{"name":{{$b}}}]}' /\
-                          -w'[clusterName]:<C>Q:[^0]<C>s[-1][buckets]' -i'[clusterName]:<C>Q:[-1][buckets][0]' -tc
+bash $ <document.json jtc -w'<name>l:[-1]' -pi'<name>l:' -T'{"buckets":[{"name":{{}}}]}' /\
+                          -w'[clusterName]:<C>Q:[^0]<C>s[-1][buckets]' -mi'[clusterName]:<>Q:[-1][buckets]' -tc
 [
    {
       "buckets": [
          { "name": "bucket1" },
          { "name": "bucket2" }
       ],
-      "clustername": "cluster1"
+      "clusterName": "cluster1"
    },
    {
       "buckets": [
          { "name": "bucket2" }
       ],
-      "clustername": "cluster1"
+      "clusterName": "cluster1"
    },
    {
       "buckets": [
          { "name": "bucket3" },
          { "name": "bucket4" }
       ],
-      "clustername": "cluster2"
+      "clusterName": "cluster2"
    },
    {
       "buckets": [
          { "name": "bucket4" }
       ],
-      "clustername": "cluster2"
+      "clusterName": "cluster2"
    }
 ]
 bash $ 
 
 # final version: 3. walk all unique `cluster`s wrapping those into a JSON array:
-bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"{$A}":{{$a}}, "buckets":[{"name":{{$b}}}]}' /\
-                          -w'[clusterName]:<C>Q:[^0]<C>s[-1][buckets]' -i'[clusterName]:<C>Q:[-1][buckets][0]' /\
+bash $ <document.json jtc -w'<name>l:[-1]' -pi'<name>l:' -T'{"buckets":[{"name":{{}}}]}' /\
+                          -w'[clusterName]:<C>Q:[^0]<C>s[-1][buckets]' -mi'[clusterName]:<>Q:[-1][buckets]' /\
                           -jw'[clusterName]:<>q:[-1]' -tc
 [
    {
@@ -100,20 +100,20 @@ bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"{
          { "name": "bucket1" },
          { "name": "bucket2" }
       ],
-      "clustername": "cluster1"
+      "clusterName": "cluster1"
    },
    {
       "buckets": [
          { "name": "bucket3" },
          { "name": "bucket4" }
       ],
-      "clustername": "cluster2"
+      "clusterName": "cluster2"
    }
 ]
 bash $ 
 ```
 
-Another solution, probably a bit shorter would be to do in 4 steps:
+Another (alternativeo) solution, is to do in 4 steps:
 1. merge-insert bucket's names from all duplicate `cluster`s into each unique record
 2. extract all unique `cluster` records and wrap then into array
 3. transform all `bucket`s into `{"name": "bucket"}`
