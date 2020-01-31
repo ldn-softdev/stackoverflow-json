@@ -50,7 +50,7 @@ My goal is to have only one column title row in the table instead of one for eac
 ### A:
 even though the question was specific for jq, the type of operation is typical for JSON.
 
-with [`jtc`](https://github.com/ldn-softdev/jtc), the sulution looks like this:
+with [`jtc`](https://github.com/ldn-softdev/jtc), the solution is this:
 ```bash
 bash $ echo ${conn_list[@]} | jtc -J / -w'<host>l:' -qqT'"{$c}\t{$d}\t{$g}\t{$h}\t{$a}\t{$b}\t{$e}\t{$f}"'
 mike1	c04	10.244.7.235	38558	129.12.34.567	22	129.23.45.678	11019
