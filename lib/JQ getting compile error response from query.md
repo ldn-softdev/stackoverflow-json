@@ -50,6 +50,12 @@ bash $ <sample.json jtc -w'[lambda][apple-cider][0][shape]'
 "none"
 bash $ 
 ```
+However, if the labels are unique within JSON tree (per a branch), then, it's best to address via a recursive search:
+```bash
+bash $ <sample.json jtc -w'<apple-cider>l<shape>l'
+"none"
+bash $ 
+```
 
 
  
