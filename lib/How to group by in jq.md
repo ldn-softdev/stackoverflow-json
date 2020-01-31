@@ -20,7 +20,7 @@ And I want to convert it to
 How do I do that in jq?
 
 ### A:
-the first solution that imediately springs onto mind, do it in 3 steps:
+the first solution using [`jtc`](https://github.com/ldn-softdev/jtc) that imediately springs onto mind, do it in 3 steps:
 1. transform each record into the required by the output
 2. insert `"name"` records from each duplicae `cluster` into a first unique one
 3. walk all unique `cluster`s wrapping those into a JSON array
