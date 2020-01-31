@@ -21,13 +21,13 @@ How do I do that in jq?
 
 ### A:
 the first solution that imediately springs onto mind, do it in 3 steps:
-1. transform each records into required by the output
-2. insert `"name"` records from each duplicae `cluster` into a first unique
-3. walk all unique `cluster`s wrapping those into a JSON array.
+1. transform each record into the required by the output
+2. insert `"name"` records from each duplicae `cluster` into a first unique one
+3. walk all unique `cluster`s wrapping those into a JSON array
 
 let's see it in steps:
 ```bash
-# 1. transform each records into required by the output:
+# 1. transform each record into the required by the output:
 bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"clustername":{{$a}}, "buckets":[{"name":{{$b}}}]}' -tc
 [
    {
@@ -57,7 +57,7 @@ bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"c
 ]
 bash $ 
 
-# 2. insert `"name"` records from each duplicae `cluster` into a first unique:
+# 2. insert `"name"` records from each duplicae `cluster` into a first unique one:
 bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"clustername":{{$a}}, "buckets":[{"name":{{$b}}}]}' /\
                           -w'[clustername]:<C>Q:[^0]<C>s[-1][buckets]' -i'[clustername]:<C>Q:[-1][buckets][0]' -tc
 [
