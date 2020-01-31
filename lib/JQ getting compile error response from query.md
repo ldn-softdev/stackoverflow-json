@@ -1,5 +1,5 @@
 ### Query: [JQ getting compile error response from query](https://stackoverflow.com/questions/59995900/jq-getting-compile-error-response-from-query)
-([jumpt to the answer]())
+([jumpt to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/JQ%20getting%20compile%20error%20response%20from%20query.md#a))
 
 I would like to ask for your guidance for newbie like me on testing query on a sample file. I'm getting  compile error while testing it. Please advice on what is needed to adjust.
 
