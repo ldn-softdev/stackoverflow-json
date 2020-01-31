@@ -15,3 +15,4 @@ forum:
 - [How to parse extremely large file of json stream to valid JSON](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20parse%20extremely%20large%20file%20of%20json%20stream%20to%20valid%20JSON.md)
 - [Print empty string for a missing key and converting the result to CSV](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Print%20empty%20string%20for%20a%20missing%20key%20and%20converting%20the%20result%20to%20CSV.md)
 - [Retrieve value of @odata.id with jq in Redfish output](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Retrieve%20value%20of%20odata-id%20with%20jq%20in%20Redfish%20output.md)
+- [Jq to replace a word with in the json](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Jq%20to%20replace%20a%20word%20with%20in%20the%20json.md)
