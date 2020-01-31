@@ -58,7 +58,7 @@ bash $ <example.json jtc -w'<>f[schemes][-1]' -i"{\"schemes\":$schem}"
 }
 bash $ 
 ```
-\- insert would fail if `"schemes"` exist because inserting a clashing label with `-i` always fails - it preserves the existing one
+\- insert would fail if `"schemes"` exist because inserting a clashing label with `-i` always fails - it preserves the existing one  
 \- insert would work if `"schemes"` is missing because upon trying to walk `[schemes]` walking would fail and the walk-path would get
 reinstated at root (thanks to `<>f` lexeme) then the whole object under insert option `{\"schemes\":$schem}` would get inserted
 
