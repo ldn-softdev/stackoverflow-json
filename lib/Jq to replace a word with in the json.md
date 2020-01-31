@@ -28,7 +28,7 @@ I have a json below and i need to fetch the value of the key "toModify" in data 
     }
 
 ### A:
-with `jtc` the ask is trivial:
+with [`jtc`](https://github.com/ldn-softdev/jtc) the ask is trivial:
 ```bash
 bash $ <file.json jtc -w'[key]:<toModify>[-1][value]' -u'"xyz"'
 {
