@@ -62,4 +62,7 @@ bash $
 \- insert would work if `"schemes"` is missing because upon trying to walk `[schemes]` walking would fail and the walk-path would get
 reinstated at root (thanks to `<>f` lexeme) then the whole object under insert option `{\"schemes\":$schem}` would get inserted
 
-
+Naturally, if in-place modification of the source file is required - use `-f` option:
+```bash
+bash $ jtc -w'<>f[schemes][-1]' -i"{\"schemes\":$schem}" -f example.json
+```
