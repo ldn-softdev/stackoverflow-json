@@ -42,6 +42,8 @@ Edit: the question is not about how to pass on bash variables to jq.
 ### A:
 using [`jtc`](https://github.com/ldn-softdev/jtc), it's quite simple:
 ```bash
+bash $ schem='["https"]'
+bash $ 
 bash $ <example.json jtc -w'<>f[schemes][-1]' -i"{\"schemes\":$schem}"
 {
    "dorum": "value3",
