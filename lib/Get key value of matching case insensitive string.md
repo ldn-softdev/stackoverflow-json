@@ -60,5 +60,6 @@ bash $ jtc -aw'[value]:<myemail@domain.com\I>R[-1][id]' sample.json
 366235941554
 bash $ 
 ```
-> Note the trailing `\I` in the REGEX match lexeme - that's the way to specify REGEX options.
+> Note the trailing `\I` in the REGEX match lexeme - that's the way to specify
+[REGEX options](https://github.com/ldn-softdev/jtc/blob/master/User%20Guide.md#searching-json-with-re).
 
