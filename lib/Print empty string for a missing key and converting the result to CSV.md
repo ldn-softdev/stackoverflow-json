@@ -38,7 +38,7 @@ then use template to interpolate the result.
 
 I took a liberty of extending the example with a few additional entries missing some values and reshuffling the object entries:
 ```bash
-bash $ cat file.json 
+bash $ cat file.json
 {
   "id": "ABC",
   "deviceName": "",
@@ -56,8 +56,7 @@ bash $ cat file.json
   "master": 20
 }
 {
-  "deviceName": "",
-  "id": "ABC"
+  "id": ""
 }
 bash $ 
 
@@ -67,7 +66,7 @@ bash $ <file.json jtc -ai'{"deviceName":"","id":"","master":0,"total":0}' /\
 "ABC", "", 100, 20
 "ABC", "", 100, 20
 "ABC", "", 0, 20
-"ABC", "", 0, 0
+"", "", 0, 0
 bash $ 
 ```
 
