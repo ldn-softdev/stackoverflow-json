@@ -1,5 +1,5 @@
 ### Query: [Get key value of matching case insensitive string](https://stackoverflow.com/questions/59969841/jq-get-key-value-of-matching-case-insensitive-string)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Get%20key%20value%20of%20matching%20case%20insensitive%20string.md#a))
 
 I'm attempting to pull some specific data from the "id" field but `jq` matches are being case sensitive and creating an issue with the searches (not matching, basically, so returning 0 results).
 
@@ -54,10 +54,11 @@ I've searched seemingly everywhere but I'm unable to find any examples of this b
 ### A:
 
 [`jtc`](https://github.com/ldn-softdev/jtc) based solution: since a stream of JSON is given to process all of them `-a` option is
-requieed:
+required:
 ```bash
 bash $ jtc -aw'[value]:<myemail@domain.com\I>R[-1][id]' sample.json
 366235941554
 bash $ 
 ```
+> Note the trailing `\I` in the REGEX match lexeme - that's the way to specify REGEX options.
 
