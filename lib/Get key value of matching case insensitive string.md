@@ -1,4 +1,4 @@
-### Query: [Get key value of matching case insensitive string](https://stackoverflow.com/questions/59969841/jq-get-key-value-of-matching-case-insensitive-string)
+### Query: [JQ Get key value of matching case insensitive string](https://stackoverflow.com/questions/59969841/jq-get-key-value-of-matching-case-insensitive-string)
 ([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Get%20key%20value%20of%20matching%20case%20insensitive%20string.md#a))
 
 I'm attempting to pull some specific data from the "id" field but `jq` matches are being case sensitive and creating an issue with the searches (not matching, basically, so returning 0 results).
@@ -62,4 +62,3 @@ bash $
 ```
 > Note the trailing `\I` in the REGEX match lexeme - that's the way to specify
 [REGEX options](https://github.com/ldn-softdev/jtc/blob/master/User%20Guide.md#searching-json-with-re).
-
