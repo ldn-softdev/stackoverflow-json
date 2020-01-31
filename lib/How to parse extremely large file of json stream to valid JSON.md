@@ -57,7 +57,7 @@ Thanks!
 it'll be processed (i.e. `jtc` won't fail because JSON is too big).
 
 However, if it's required to process a stream of JSONs with the memory constrains, then it's best to make `jtc` to parse JSONs
-in a _streamed_ way: `jtc` switches to a _streamed_ read once the input is <stdin> and option `-a` given, then the memory will be
+in a _streamed_ way: `jtc` switches to a _streamed_ read once the input is `<stdin>` and option `-a` given, then the memory will be
 consumed only for 1 JSON at most upon parsing:
 ```bash
 bash $ cat stream.json | jtc -aw'[datetime]:<^2019>R[-1]' / -J
