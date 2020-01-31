@@ -1,5 +1,5 @@
 ### Query: [Print empty string for a missing key and converting the result to CSV](https://stackoverflow.com/questions/59960742/print-empty-string-for-a-missing-key-and-converting-the-result-to-csv)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Print%20empty%20string%20for%20a%20missing%20key%20and%20converting%20the%20result%20to%20CSV.md#a))
 
 I am trying to convert belowJSON to CSV using jq command but the final CSV is unable to place deviceName field properly as it's missing in some JSON lines.
 
