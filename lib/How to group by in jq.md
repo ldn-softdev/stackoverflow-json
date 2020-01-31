@@ -114,10 +114,10 @@ bash $
 ```
 
 However, after a bit of thinking, it's possible to provide a much better/concise solution in 2 steps only:
-1. transform each entry into object with the top lable of the cluster
+1. transform each entry into object with the top label of the cluster
 2. after merging objects by labels transform each record into a desired format
 ```bash
-# 1. transform each entry into object with the top lable of the cluster:
+# 1. transform each entry into object with the top label of the cluster:
 bash $ <document.json jtc -w'[:]' -T'{"{$a}":{"name":{{$b}}}}' -ll -tc
 "cluster1": { "name": "bucket1" }
 "cluster1": { "name": "bucket2" }
