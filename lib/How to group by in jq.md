@@ -1,5 +1,5 @@
 ### Query: [How to group by in jq?](https://stackoverflow.com/questions/60011507/how-to-group-by-in-jq)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20group%20by%20in%20jq.md#a))
 
 Here's the json document
 
