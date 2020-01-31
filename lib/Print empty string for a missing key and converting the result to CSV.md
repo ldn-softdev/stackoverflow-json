@@ -36,7 +36,7 @@ I want output something like below which adds empty value if deviceName is missi
 To achieve the ask here the best way: would be ensure that all the entries have all the default entries inserted (if any is missed) and 
 then use template to interpolate the result.
 
-I took a liberty of extending the example with each additional entries missing some values and reshuffling the object entries:
+I took a liberty of extending the example with a few additional entries missing some values and reshuffling the object entries:
 ```bash
 bash $ cat file.json 
 {
