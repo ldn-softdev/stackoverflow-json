@@ -1,5 +1,5 @@
 ### Query: [jq filter expression in string interpolation](https://stackoverflow.com/questions/59936373/jq-filter-expression-in-string-interpolation)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20filter%20expression%20in%20string%20interpolation.md#a))
 
 I have been trying to reduce the array to a string to be used in string interpolation.
 
