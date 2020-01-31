@@ -126,7 +126,8 @@ bash $ <document.json jtc -w'[:]' -T'{"{$a}":{"name":{{$b}}}}' -ll -tc
 bash $ 
 
 # 2: after merging objects by labels transform each record into a desired format:
-bash $ <document.json jtc -w'[:]' -T'{"{$a}":{"name":{{$b}}}}' -ll / -jw'[:]<L>k' -T'{"clusterName":{{L}}, "buckets":{{}}}' -tc
+bash $ <document.json jtc -w'[:]' -T'{"{$a}":{"name":{{$b}}}}' -ll /\
+                          -jw'[:]<L>k' -T'{"clusterName":{{L}}, "buckets":{{}}}' -tc
 [
    {
       "buckets": [
