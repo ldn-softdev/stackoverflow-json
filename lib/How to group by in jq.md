@@ -28,7 +28,7 @@ the first solution that imediately springs onto mind, do it in 3 steps:
 let's see it in steps:
 ```bash
 # 1. transform each record into the required by the output:
-bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"clustername":{{$a}}, "buckets":[{"name":{{$b}}}]}' -tc
+bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"clusterName":{{$a}}, "buckets":[{"name":{{$b}}}]}' -tc
 [
    {
       "buckets": [
