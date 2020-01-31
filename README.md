@@ -18,3 +18,4 @@ forum:
 - [Retrieve value of @odata.id with jq in Redfish output](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Retrieve%20value%20of%20odata-id%20with%20jq%20in%20Redfish%20output.md)
 - [Jq to replace a word with in the json](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Jq%20to%20replace%20a%20word%20with%20in%20the%20json.md)
 - [Conditionally add json array using jq and bash](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Conditionally%20add%20json%20array%20using%20jq%20and%20bash.md)
+- [jq filter expression in string interpolation](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20filter%20expression%20in%20string%20interpolation.md)
