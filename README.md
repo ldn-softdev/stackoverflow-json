@@ -12,3 +12,4 @@ forum:
 - [Convert objects to arrays of key-value pairs](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Convert%20objects%20to%20arrays%20of%20key-value%20pairs.md)
 - [jq “object cannot be tsv-formatted, only array” error when making table from json data](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/reformat%20objects%20to%20be%20tsv-formatted%20making%20table%20from%20json%20data.md)
 - [JQ Get key value of matching case insensitive string](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Get%20key%20value%20of%20matching%20case%20insensitive%20string.md)
+- [How to parse extremely large file of json stream to valid JSON](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20parse%20extremely%20large%20file%20of%20json%20stream%20to%20valid%20JSON.md)
