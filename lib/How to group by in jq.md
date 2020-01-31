@@ -58,8 +58,8 @@ bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"c
 bash $ 
 
 # 2. insert `"name"` records from each duplicae `cluster` into a first unique one:
-bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"clustername":{{$a}}, "buckets":[{"name":{{$b}}}]}' /\
-                          -w'[clustername]:<C>Q:[^0]<C>s[-1][buckets]' -i'[clustername]:<C>Q:[-1][buckets][0]' -tc
+bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"clusterName":{{$a}}, "buckets":[{"name":{{$b}}}]}' /\
+                          -w'[clusterName]:<C>Q:[^0]<C>s[-1][buckets]' -i'[clusterName]:<C>Q:[-1][buckets][0]' -tc
 [
    {
       "buckets": [
@@ -91,9 +91,9 @@ bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"c
 bash $ 
 
 # final version: 3. walk all unique `cluster`s wrapping those into a JSON array:
-bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"clustername":{{$a}}, "buckets":[{"name":{{$b}}}]}' /\
-                          -w'[clustername]:<C>Q:[^0]<C>s[-1][buckets]' -i'[clustername]:<C>Q:[-1][buckets][0]' /\
-                          -jw'[clustername]:<>q:[-1]' -tc
+bash $ <document.json jtc -w'<clusterName>l:[-1]' -u'<clusterName>l:[-1]' -T'{"clusterName":{{$a}}, "buckets":[{"name":{{$b}}}]}' /\
+                          -w'[clusterName]:<C>Q:[^0]<C>s[-1][buckets]' -i'[clusterName]:<C>Q:[-1][buckets][0]' /\
+                          -jw'[clusterName]:<>q:[-1]' -tc
 [
    {
       "buckets": [
