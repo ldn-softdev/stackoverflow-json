@@ -1,5 +1,5 @@
 ### Query: [Conditionally add json array using jq and bash](https://stackoverflow.com/questions/59946450/conditionally-add-json-array-using-jq-and-bash)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Conditionally%20add%20json%20array%20using%20jq%20and%20bash.md#a))
 
 Am trying to add a json array with just one array element to a json. And it has to be added only if it does not already exist. 
 Example json is below.
