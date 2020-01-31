@@ -1,5 +1,5 @@
 ### Query: [How to parse extremely large file of json stream to valid JSON](https://stackoverflow.com/questions/59962659/how-to-parse-extremely-large-file-of-json-stream-to-valid-json)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20parse%20extremely%20large%20file%20of%20json%20stream%20to%20valid%20JSON.md#a))
 
 I'm working on a CS course project where I've to perform sentiment analysis of Twitter data on an Ubuntu VM. I was able to build a crawler to obtain the data but I have the output in the format of a file of JSON stream which is a very large file which is of the style:
 
