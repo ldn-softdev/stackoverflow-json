@@ -17,3 +17,4 @@ forum:
 - [Print empty string for a missing key and converting the result to CSV](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Print%20empty%20string%20for%20a%20missing%20key%20and%20converting%20the%20result%20to%20CSV.md)
 - [Retrieve value of @odata.id with jq in Redfish output](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Retrieve%20value%20of%20odata-id%20with%20jq%20in%20Redfish%20output.md)
 - [Jq to replace a word with in the json](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Jq%20to%20replace%20a%20word%20with%20in%20the%20json.md)
+- [Conditionally add json array using jq and bash](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Conditionally%20add%20json%20array%20using%20jq%20and%20bash.md)
