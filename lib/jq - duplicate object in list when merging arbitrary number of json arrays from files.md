@@ -1,5 +1,5 @@
 ### Query: [jq - duplicate object in list when merging arbitrary number of json arrays from files](https://stackoverflow.com/questions/59884137/jq-duplicate-object-in-list-when-merging-arbitrary-number-of-json-arrays-from)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20-%20duplicate%20object%20in%20list%20when%20merging%20arbitrary%20number%20of%20json%20arrays%20from%20files.md#a))
 
 I'm configuring cloudwatch agent logs, using saltstack (which is why there some odd syntax).  I am trying to merge an arbitrary number of files, containing identical schema's, but different data into a single file.
 
@@ -125,7 +125,7 @@ jq  -s '.[0].logs.logs_collected.files.collect_list += [.[].logs.logs_collected.
 if you've gotten this far, thank you.  One additional point to note, is that if i change the order of the files the first index of `collect_list` is always duplicated and if `web.json` is last (the only one with a length of 2) the second log file is not in the group.
 
 ### A:
-\- the ask to achive with [`jtc`](https://github.com/ldn-softdev/jtc) is so obvious, so boring:
+\- the ask to achive with [`jtc`](https://github.com/ldn-softdev/jtc) is so boring, so obvious:
 ```bash
 bash $ <web.json jtc -mi suricata.json -i wazuh-agent.json -tc
 {
@@ -151,8 +151,6 @@ Then the solution is this:
 1. read all records from `collect_list` from every JSON file (and build a JAON containing the entire collection)
 2. then swap out resulting collection with the known file name
 3. and replace in the file its `collect_list` with the built one.
-
-The advantage of such solution that it let handling any number of files as long they share the same schema:
 ```bash
 bash $ jtc -Jw'<collect_list>l[:]' / -w'<J>v' -u web.json / -w'<collect_list>l' -u0 -T{{J}} -tc *.json
 {
@@ -171,6 +169,6 @@ bash $ jtc -Jw'<collect_list>l[:]' / -w'<J>v' -u web.json / -w'<collect_list>l' 
 }
 bash $ 
 ```
-
+The advantage of such solution that it let handling any number of files as long they share the same schema:
 
 
