@@ -1,5 +1,5 @@
 ### Query: [how to parse more complex human-oriented text output to machine-friently style?](https://stackoverflow.com/questions/59913240/how-to-parse-more-complex-human-oriented-text-output-to-machine-friently-style)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/how%20to%20parse%20more%20complex%20human-oriented%20text%20output%20to%20machine-friently%20style.md#a))
 
 This is the question about how to parse "unparseable" output into json, or to something easily consumable as json. This is "little" bit behind trivial stuff, so I'd like to know, how do you solve these things in principle, it's not about this specific example only. But example:
 
