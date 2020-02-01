@@ -1,5 +1,5 @@
 ### Query: [One-liner way to invert boolean output in bash?](https://stackoverflow.com/questions/59913511/one-liner-way-to-invert-boolean-output-in-bash)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/One-liner%20way%20to%20invert%20boolean%20output%20in%20bash.md#a))
 
 Is there a short and clean one-liner way to invert a boolean in bash ?
 
