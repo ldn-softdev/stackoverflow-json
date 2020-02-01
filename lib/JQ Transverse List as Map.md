@@ -1,5 +1,5 @@
 ### Query: [JQ Transverse List as Map](https://stackoverflow.com/questions/59915712/jq-transverse-list-as-map)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/JQ%20Transverse%20List%20as%20Map.md#a))
 
 I want to convert the Below JSON to Map. but its coming as a list.
 
