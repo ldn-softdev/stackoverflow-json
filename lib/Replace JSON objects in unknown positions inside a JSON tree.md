@@ -1,5 +1,5 @@
 ### Query: [Replace JSON objects in unknown positions inside a JSON tree](https://stackoverflow.com/questions/59913277/replace-json-objects-in-unknown-positions-inside-a-json-tree)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Replace%20JSON%20objects%20in%20unknown%20positions%20inside%20a%20JSON%20tree.md#a))
 
 In a JSON file I need to replace encrypted values with their clear text values as an initialization process using the command line tool `jq`. An application will then re-encrypt the values with its own keys, overwriting the clear text values. Encrypted values are represented as "$crypto" objects, containing information about the encryption method and which keys were used, looking like this:
 
