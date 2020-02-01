@@ -20,3 +20,4 @@ forum:
 - [Conditionally add json array using jq and bash](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Conditionally%20add%20json%20array%20using%20jq%20and%20bash.md)
 - [jq filter expression in string interpolation](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20filter%20expression%20in%20string%20interpolation.md)
 - [JQ Transverse List as Map](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/JQ%20Transverse%20List%20as%20Map.md)
+- [One-liner way to invert boolean output in bash?](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/One-liner%20way%20to%20invert%20boolean%20output%20in%20bash.md)
