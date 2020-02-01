@@ -124,8 +124,8 @@ converted (line by line) into some JOSN, then process it with `jtc`:
 
 1. converting input into a stream of JSONs:
 ```bash
-bash $ <inputs.txt sed -E 's/^ *([^=: ]+)[: =]+(.+)/{"\1": "\2"}/; s/""/"/g' | grep '^{'
-{"2": "sink input(s) available."}
+bash $ <inputs.txt sed -E 's/^ *([^=:]+)[ =:]+(.+)/{"\1": "\2"}/; s/""/"/g; s/ +":/":/'
+{"2 sink input(s)": "available."}
 {"index": "144"}
 {"driver": "<protocol-native.c>"}
 {"flags": " "}
@@ -134,13 +134,15 @@ bash $ <inputs.txt sed -E 's/^ *([^=: ]+)[: =]+(.+)/{"\1": "\2"}/; s/""/"/g' | g
 {"volume": "front-left: 15728 /  24% / -37.19 dB,   front-right: 15728 /  24% / -37.19 dB"}
 {"balance": "0.00"}
 {"muted": "no"}
-{"current": "latency: 70.48 ms"}
-{"requested": "latency: 210.00 ms"}
-{"sample": "spec: float32le 2ch 44100Hz"}
-{"channel": "map: front-left,front-right"}
-{"resample": "method: copy"}
+{"current latency": "70.48 ms"}
+{"requested latency": "210.00 ms"}
+{"sample spec": "float32le 2ch 44100Hz"}
+{"channel map": "front-left,front-right"}
+{"": "Stereo"}
+{"resample method": "copy"}
 {"module": "13"}
 {"client": "245 <MPlayer>"}
+{"": "properties:"}
 {"media.name": "UNREAL! Tetris Theme on Violin and Guitar-TnDIRr9C83w.webm"}
 {"application.name": "MPlayer"}
 {"native-protocol.peer": "UNIX socket client"}
@@ -162,13 +164,15 @@ bash $ <inputs.txt sed -E 's/^ *([^=: ]+)[: =]+(.+)/{"\1": "\2"}/; s/""/"/g' | g
 {"volume": "front-left: 24903 /  38% / -25.21 dB,   front-right: 24903 /  38% / -25.21 dB"}
 {"balance": "0.00"}
 {"muted": "no"}
-{"current": "latency: 70.50 ms"}
-{"requested": "latency: 210.00 ms"}
-{"sample": "spec: float32le 2ch 48000Hz"}
-{"channel": "map: front-left,front-right"}
-{"resample": "method: speex-float-1"}
+{"current latency": "70.50 ms"}
+{"requested latency": "210.00 ms"}
+{"sample spec": "float32le 2ch 48000Hz"}
+{"channel map": "front-left,front-right"}
+{"": "Stereo"}
+{"resample method": "speex-float-1"}
 {"module": "13"}
 {"client": "251 <MPlayer>"}
+{"": "properties:"}
 {"media.name": "Trombone Shorty At Age 13 - 2nd Line-k9YUi3UhEPQ.webm"}
 {"application.name": "MPlayer"}
 {"native-protocol.peer": "UNIX socket client"}
@@ -183,9 +187,11 @@ bash $ <inputs.txt sed -E 's/^ *([^=: ]+)[: =]+(.+)/{"\1": "\2"}/; s/""/"/g' | g
 {"application.process.session_id": "2"}
 {"module-stream-restore.id": "sink-input-by-application-name:MPlayer"}
 bash $ 
+
 ```
 2. convert the stream of JSONs into the requested output:
-bash $ <inputs.txt sed -E 's/^ *([^=: ]+)[: =]+(.+)/{"\1": "\2"}/; s/""/"/g' | grep '^{' \
+```bash
+bash $ <inputs.txt sed -E 's/^ *([^=:]+)[ =:]+(.+)/{"\1": "\2"}/; s/""/"/g; s/ +":/":/' \
                           | jtc -J /\
                                 -w'<application.process.id>l:' -w'<index>l:' -w'<application.name>l:' -w'<media.name>l:' -jl /\
                                 -jw[:] -T'{"appname":"{$a}", "pid":{$b}, "{$C}":{$c}, "medianame":"{$d}"}'
@@ -204,7 +210,6 @@ bash $ <inputs.txt sed -E 's/^ *([^=: ]+)[: =]+(.+)/{"\1": "\2"}/; s/""/"/g' | g
    }
 ]
 bash $ 
-```bash
 ```
 
 
