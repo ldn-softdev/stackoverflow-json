@@ -24,3 +24,12 @@ forum:
 - [Replace JSON objects in unknown positions inside a JSON tree](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Replace%20JSON%20objects%20in%20unknown%20positions%20inside%20a%20JSON%20tree.md)
 - [how to parse more complex human-oriented text output to machine-friently style?](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/how%20to%20parse%20more%20complex%20human-oriented%20text%20output%20to%20machine-friently%20style.md)
 - [jq: change multiple values within a select object](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20-%20change%20multiple%20values%20within%20a%20select%20object.md)
+- [I want to represent json data In Column format](https://stackoverflow.com/questions/59896979/i-want-to-represent-json-data-in-column-format)
+
+
+
+
+
+
+
+
