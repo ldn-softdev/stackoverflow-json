@@ -26,13 +26,13 @@ I am not good with jq and formatting. But I want to represent the json data in t
 ### A:
 \- with [`jtc`](https://github.com/ldn-softdev/jtc) it's a matter of dumping each record with the requested entries order:
 ```bash
+# 1. with order of columns sorted by labels alphabetically:
 bash $ <file.json jtc -w'<$#: >v[:]' -qqT'"{}"'
 20429 200 https://url1
 30890 401 https://url2
 bash $ 
-```
-If the order to be respected:
-```bash
+
+# 2. with order of columns in arbitrary order:
 bash $ <file.json jtc -w[:] -qqT'"{$b} {$a} {$c}"'
 200 20429 https://url1
 401 30890 https://url2
