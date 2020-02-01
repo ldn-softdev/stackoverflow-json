@@ -144,4 +144,33 @@ bash $ <web.json jtc -mi suricata.json -i wazuh-agent.json -tc
 }
 bash $ 
 ```
+A lot more interesting ask would be this: say, the number of json files in the folder is too big to enlist each file over `-i` option, 
+it would be a lot handier solution to include `*.json` files as an argument. The only requirement here would be to know just one
+file name, e.g.: `web.json`  
+Then the solution is this:
+1. read all records from `collect_list` from every JSON file (and build a JAON containing the entire collection)
+2. then swap out resulting collection with the known file name
+3. and replace in the file its `collect_list` with the built one.
+
+The advantage of such solution that it let handling any number of files as long they share the same schema:
+```bash
+bash $ jtc -Jw'<collect_list>l[:]' / -w'<J>v' -u web.json / -w'<collect_list>l' -u0 -T{{J}} -tc *.json
+{
+   "logs": {
+      "logs_collected": {
+         "files": {
+            "collect_list": [
+               { "file_name": "/var/log/suricata/eve-ips.json", "log_group_name": "{{grains.environment_full}}SuricataIPS", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%dT%H:%M:%S.%f+0000", "timezone": "UTC" },
+               { "file_name": "/var/log/company/company-json.log", "log_group_name": "{{grains.environment_full}}Play", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%dT%H:%M:%S.%fZ", "timezone": "UTC" },
+               { "file_name": "/var/log/company/company-notifications.log", "log_group_name": "{{grains.environment_full}}Notifications", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%dT%H:%M:%S.%fZ", "timezone": "UTC" },
+               { "file_name": "/var/ossec/logs/alerts/alerts.json", "log_group_name": "{{grains.environment_full}}OSSEC", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%d %H:%M:%S", "timezone": "UTC" }
+            ]
+         }
+      }
+   }
+}
+bash $ 
+```
+
+
 
