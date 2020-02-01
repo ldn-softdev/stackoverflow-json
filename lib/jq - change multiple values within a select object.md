@@ -1,5 +1,5 @@
 ### Query: [jq: change multiple values within a select object](https://stackoverflow.com/questions/59904094/jq-change-multiple-values-within-a-select-object)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20-%20change%20multiple%20values%20within%20a%20select%20object.md#a))
 
 I have an array of JSON objects, and I am trying change the `name` and `version` on the object of a given `@type`, with the following input
 ```
