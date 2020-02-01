@@ -100,6 +100,8 @@ But I have not been able to make meaningful progress on performing the replaceme
 ### A:
 the query using [`jtc`](https://github.com/ldn-softdev/jtc) is super easy:
 ```bash
+bash $ ev='"clearTextValue"'
+bash $ 
 bash $ <input.json jtc -w'<$crypto>l:[-1]' -u"$ev"
 {
    "unknownKey1": {
