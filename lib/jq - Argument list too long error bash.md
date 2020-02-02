@@ -1,5 +1,5 @@
 ### Query: [/usr/bin/jq: Argument list too long error bash](https://stackoverflow.com/questions/59854249/usr-bin-jq-argument-list-too-long-error-bash)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20-%20Argument%20list%20too%20long%20error%20bash.md#a))
 
 I want to replace the value in sample json from larger swagger.json file content and it is too large.
 
