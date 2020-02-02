@@ -31,6 +31,8 @@ forum:
 - [jq - duplicate object in list when merging arbitrary number of json arrays from files](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20-%20duplicate%20object%20in%20list%20when%20merging%20arbitrary%20number%20of%20json%20arrays%20from%20files.md)
 - [How to print object element for each internal array element in jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20print%20object%20element%20for%20each%20internal%20array%20element%20in%20jq.md)
 - [Verifying existence of a root level element with jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Verifying%20existence%20of%20a%20root%20level%20element%20with%20jq.md)
+- [/usr/bin/jq: Argument list too long error bash](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20-%20Argument%20list%20too%20long%20error%20bash.md)
+
 
 
 
