@@ -38,7 +38,7 @@ Tried the blow. Does not work:
     
 ### A:
 the query here is only about sorting records by the record's inner labels
-1. to achieve the output in the question:
+1. to achieve the same output as in the question:
 ```bash
 bash $ <example.json jtc -w'[title]:<>g:[-1]' -tc
 {
@@ -52,7 +52,7 @@ bash $ <example.json jtc -w'[title]:<>g:[-1]' -tc
 bash $ 
 ```
 
-2. to sort the array and apply in-place modification into the source file:
+2. to sort and apply in-place modification into the source file:
 ```bash
 bash $ jtc -w'<values>l' -pi'[title]:<>g:[-1]' -f example.json 
 bash $ jtc example.json
