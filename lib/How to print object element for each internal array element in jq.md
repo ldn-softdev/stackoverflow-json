@@ -50,4 +50,6 @@ bash $ <test.json jtc -w'<item2>l<I>v[-1][array1][:]' -qqT'"{I}, {}"'
 123, 789, teststring2
 bash $ 
 ```
-
+\- `<item2>l<I>v`: find recursively a value by the label `"item2"` and memorize it (in `I`)
+\- `[-1][array1][:]`: step up 1 tier in the JSON tree, select `"array1"` and then select each array
+\- `-qqT'"{I}, {}"'`: in the template interpolate memorized valie in `I` and then each walked array
