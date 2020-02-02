@@ -1,5 +1,5 @@
 ### Query: [Issue when creating AWS fargate task definition json](https://stackoverflow.com/questions/60025451/issue-when-creating-aws-fargate-task-definition-json)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Issue%20when%20creating%20AWS%20fargate%20task%20definition%20json.md#a))
 
 I'm trying to create a json file (task definiton for AWS fargate) using jq from my gitlab pipeline.
 
@@ -109,6 +109,10 @@ Looking forward to get some ideas from you, and thanks a lot in advanced.
 ### A:
 with [`jtc`](https://github.com/ldn-softdev/jtc), it's a matter of inserting a template into a right place:
 ```bash
+bash $ group='"awslogs-group"'
+bash $ region='"eu-west-2"'
+bash $ prefix='"awslogs-stream-prefix"'
+bash $ 
 bash $ <input.json jtc -w'[containerDefinitions][0]' -i'{"logConfiguration":{"logDriver":"awslogs","options":{"awslogs-group":'$group',"awslogs-region":'$region',"awslogs-stream-prefix":'$prefix'}}}'
 {
    "containerDefinitions": [
