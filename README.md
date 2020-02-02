@@ -5,6 +5,7 @@ using [`jtc`](https://github.com/ldn-softdev/jtc) tool. All questions are taken 
 [stackoverflow.com](https://stackoverflow.com/questions/tagged/jq%2bor%2bjson%2bbash?tab=Newest)
 forum:
 
+- [Parse simple python JSON output through command line using jq - “cannot index string with string”](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Parse%20simple%20python%20JSON%20output%20through%20command%20line%20using%20jq%20-%20cannot%20index%20string%20with%20string.md)
 - [How to group by in jq?](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20group%20by%20in%20jq.md)
 - [JQ getting compile error response from query](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/JQ%20getting%20compile%20error%20response%20from%20query.md)
 - [jq: create array of object in json and insert the new object each time bash scripts executes](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/create%20array%20of%20object%20in%20json%20and%20insert%20the%20new%20object%20each%20time%20bash%20scripts%20executes.md)
