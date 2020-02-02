@@ -1,5 +1,5 @@
 ### Query: [Verifying existence of a root level element with jq](https://stackoverflow.com/questions/59861501/verifying-existence-of-a-root-level-element-with-jq)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Verifying%20existence%20of%20a%20root%20level%20element%20with%20jq.md#a))
 
 Given a JSON structure such as below, I want to test for the existence of the `sys/` top-level key.
 
