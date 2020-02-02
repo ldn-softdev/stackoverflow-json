@@ -39,7 +39,7 @@ Thanks!
 using [`jtc`](https://github.com/ldn-softdev/jtc) there's no need to utilize `for` loop in bash, as it's easy to check all the files
 at once:
 ```bash
-bash $ jtc -w'<text>l' -qqT'"{}"' '#'*.json
+bash $ jtc -w'<text>l' -qqT'"{}"' \#*.json
 abc, 123
 def, 456
 bash $ 
