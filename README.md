@@ -5,6 +5,7 @@ using [`jtc`](https://github.com/ldn-softdev/jtc) tool. All questions are taken 
 [stackoverflow.com](https://stackoverflow.com/questions/tagged/jq%2bor%2bjson%2bbash?tab=Newest)
 forum:
 
+- [Issue when creating AWS fargate task definition json](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Issue%20when%20creating%20AWS%20fargate%20task%20definition%20json.md)
 - [Parse simple python JSON output through command line using jq - “cannot index string with string”](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Parse%20simple%20python%20JSON%20output%20through%20command%20line%20using%20jq%20-%20cannot%20index%20string%20with%20string.md)
 - [How to group by in jq?](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20group%20by%20in%20jq.md)
 - [JQ getting compile error response from query](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/JQ%20getting%20compile%20error%20response%20from%20query.md)
