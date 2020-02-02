@@ -1,5 +1,5 @@
 ### Query: [How to sort/unique output using jq](https://stackoverflow.com/questions/59849700/how-to-sort-unique-output-using-jq)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20sort%2Cunique%20output%20using%20jq.md#a))
 
 I have json like below:
 
@@ -54,7 +54,7 @@ bash $
 
 2. to sort the array and apply in-place modification into the source file:
 ```bash
-bash $ jtc -w[values] -pi'[title]:<>g:[-1]' -f example.json 
+bash $ jtc -w'<values>l' -pi'[title]:<>g:[-1]' -f example.json 
 bash $ jtc example.json
 {
    "values": [
@@ -70,9 +70,5 @@ bash $ jtc example.json
 }
 bash $ 
 ```
-
-
-
-
 
 
