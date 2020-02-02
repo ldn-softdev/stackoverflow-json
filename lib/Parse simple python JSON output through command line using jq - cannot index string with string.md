@@ -1,5 +1,5 @@
 ### Query: [Parse simple python JSON output through command line using jq - “cannot index string with string”](https://stackoverflow.com/questions/60022403/parse-simple-python-json-output-through-command-line-using-jq-cannot-index-st)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Parse%20simple%20python%20JSON%20output%20through%20command%20line%20using%20jq%20-%20cannot%20index%20string%20with%20string.md#a))
 
 I've been dancing around with this problem for a few hours and I haven't had any luck resolving it by looking up similar posts. Hopefully it's simple enough for a quick fix.
 
