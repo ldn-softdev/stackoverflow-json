@@ -1,5 +1,5 @@
 ### Query: [How to find and replace a value with jq in a nested json](https://stackoverflow.com/questions/59851383/how-to-find-and-replace-a-value-with-jq-in-a-nested-json)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20find%20and%20replace%20a%20value%20with%20jq%20in%20a%20nested%20json.md#a))
 
 How to find and replace a value with jq in a nested json.
 
