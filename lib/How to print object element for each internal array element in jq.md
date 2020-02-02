@@ -54,3 +54,13 @@ bash $
 \- `[-1][array1][:]`: step up 1 tier in the JSON tree, select `"array1"` and then select each array  
 \- `-qqT'"{I}, {}"'`: in the template interpolate memorized valie in `I` and then each walked array  
 
+if there's a reqiurement to keep string literals quoted, then use this form:
+```bash
+bash $ <test.json jtc -w'<item2>l<I>v[-1][array1][:]' -qqT'"{I}, {$a}, \"{$b}\""'
+123, 456, "teststring"
+123, 789, "teststring2"
+bash $ 
+```
+
+
+
