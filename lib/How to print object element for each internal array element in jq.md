@@ -1,4 +1,4 @@
-Query: [How to print object element for each internal array element in jq](https://stackoverflow.com/questions/59879489/how-to-print-object-element-for-each-internal-array-element-in-jq)
+### Query: [How to print object element for each internal array element in jq](https://stackoverflow.com/questions/59879489/how-to-print-object-element-for-each-internal-array-element-in-jq)
 ([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20print%20object%20element%20for%20each%20internal%20array%20element%20in%20jq.md#a))
 
 I have JSON that looks like this:
