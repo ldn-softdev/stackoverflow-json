@@ -1,5 +1,5 @@
 ### Query: [JSON parsing [`jq`]: Get value of grandparent’s sibling](https://stackoverflow.com/questions/59813234/json-parsing-jq-get-value-of-grandparent-s-sibling)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/JSON%20parsing%20jq%20-%20Get%20value%20of%20grandparent%E2%80%99s%20sibling.md#a))
 
 ### Example
 
