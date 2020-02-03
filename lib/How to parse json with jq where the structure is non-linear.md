@@ -72,7 +72,7 @@ for clarity of the answer, the username and password will be handled though shel
 bash $ user='user1'
 bash $ passwd='new_passwd'
 bash $ 
-bash $ <file.json jtc -pw'<PROFILE\d+>L:<>f[User]:<'$user'>:<>F' /\
+bash $ <file.json jtc -pw'<PROFILE\d+>L:<>f[User]:<'$user'><>F' /\
                       -w'[User]:<'$user'>:[-1][Password]' -u'"'$passwd'"'
 {
    "PROFILE1": {
