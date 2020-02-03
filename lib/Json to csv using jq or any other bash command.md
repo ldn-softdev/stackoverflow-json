@@ -1,5 +1,5 @@
 ### Query: [Json to csv using jq or any other bash command](https://stackoverflow.com/questions/59806699/json-to-csv-using-jq-or-any-other-bash-command)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Json%20to%20csv%20using%20jq%20or%20any%20other%20bash%20command.md#a))
 
 I have to parse a big json file to csv in as little a time as possible. I have the following sample json file: 
 
