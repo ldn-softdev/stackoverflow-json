@@ -1,5 +1,5 @@
 ### Query: [Converting a nested JSON into csv with jq](https://stackoverflow.com/questions/59820910/converting-a-nested-json-into-csv-with-jq)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Converting%20a%20nested%20JSON%20into%20csv%20with%20jq.md#a))
 
 I would like to convert the following JSON into a csv format using jq. I know there are tons of similar questions but I could not figure it out based on them.
 ```json
@@ -51,6 +51,7 @@ in this qeury, the best approach using [`jtc`](https://github.com/ldn-softdev/jt
 would be to linearize each record and then template-interpolate it:
 ```bash
 bash $ hdr='"number,firstName,lastName,gender,age,streetAddress,city,state,postalCode"'
+bash $ 
 bash $ <file.json jtc -w[:] -pi[:][address] -T'{{}}' /\
                       -nw' ' -qqT"$hdr" -w'[:]<L>k' -T'"{L},{$c},{$e},{$d},{$a},{$h},{$b},{$g},{$f}"'
 number,firstName,lastName,gender,age,streetAddress,city,state,postalCode
