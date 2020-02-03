@@ -52,7 +52,7 @@ The alternative operator does exactly what I was looking for.
   [1]: https://stedolan.github.io/jq/manual/#Alternativeoperator://
   
 ### A:
-- to accomplish the ask with [`jtc`](https://github.com/ldn-softdev/jtc): make individual walks for each entry 
+\- to accomplish the ask with [`jtc`](https://github.com/ldn-softdev/jtc): make individual walks for each entry 
 which might go missing, ensuring that in such case an empty string (`""`) is the result, and then template-interpolate it:
 ```bash
 bash $ <input.json jtc -jaw'<id>l<V>v' -T{{V}} -w'<V:>f[t]:<1>d<V>v' -w'<V:>f[t]:<2>d<V>v' / -qqT'"{}"'
@@ -71,7 +71,17 @@ bash $ <input.json jtc -jaw'<id>l<V>v' -T{{V}} -w'<V:>f[t]:<1>d<V>v' -w'<V:>f[t]
 bash $ 
 ```
 
-
+and with the header:
+```bash
+bash $ hdr='"id,t1,t2"'
+bash $ <input.json jtc -Jjw'<id>l<V>v' -T{{V}} -w'<V:>f[t]:<1>d<V>v' -w'<V:>f[t]:<2>d<V>v' /\
+                      -nw'<$#:,>v' -T$hdr -w[:] -qqT'"{}"' 
+id,t1,t2
+100,1,2
+200,,2
+300,1,
+bash $ 
+```
 
 
 
