@@ -35,6 +35,8 @@ forum:
 - [How to find and replace a value with jq in a nested json](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20find%20and%20replace%20a%20value%20with%20jq%20in%20a%20nested%20json.md)
 - [How to sort/unique output using jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20sort,unique%20output%20using%20jq.md)
 - [JQ - Denormalize nested object](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/JQ%20-%20Denormalize%20nested%20object.md)
+- [How to parse json with jq where the structure is non-linear](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20parse%20json%20with%20jq%20where%20the%20structure%20is%20non-linear.md)
+
 
 
 
