@@ -1,5 +1,5 @@
 ### Query: [Convert a json file to a multi row with a matrix of all the nested objects](https://stackoverflow.com/questions/59818977/convert-a-json-file-to-a-multi-row-with-a-matrix-of-all-the-nested-objects)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Convert%20a%20json%20file%20to%20a%20multi%20row%20with%20a%20matrix%20of%20all%20the%20nested%20objects.md#a))
 
 In order to use the Extended Choice Parameter Jenkins plugin, I need to create a file containing a matrix with several options, such as:
 
@@ -35,7 +35,7 @@ I can use bash, python etc...
 Thanks!        
 
 ### A:
-this how it looks with [`jtc`](https://github.com/ldn-softdev/jtc): 
+this is how it looks with [`jtc`](https://github.com/ldn-softdev/jtc): 
 ```bash
 bash $ <file.json jtc -w' ' -T'"Country\tState\tCity"'  -w'[:]<C>k[0][:]<S>k[:]' -qqT'"{C}\t{S}\t{}"'
 Country	State	City
