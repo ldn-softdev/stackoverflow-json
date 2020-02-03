@@ -1,5 +1,5 @@
 ### Query: [JQ - Denormalize nested object](https://stackoverflow.com/questions/59824452/jq-denormalize-nested-object)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/JQ%20-%20Denormalize%20nested%20object.md#a))
 
 I've been trying to convert some JSON to csv and I have the following problem:
 
