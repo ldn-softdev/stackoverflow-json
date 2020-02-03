@@ -1,5 +1,5 @@
 ### Query: [adding json objects from one file to another under single array using jq](https://stackoverflow.com/questions/59801518/adding-json-objects-from-one-file-to-another-under-single-array-using-jq)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/adding%20json%20objects%20from%20one%20file%20to%20another%20under%20single%20array%20using%20jq.md#a))
 
 I am new here so sorry if I do any mistakes while asking the question.
 
@@ -83,5 +83,8 @@ bash $ jtc output.json
 ]
 bash $ 
 ```
+\- the bare hyphen `-` is needed to ensure that source JSON is read from <stdin>, (i.e. from `<File_1.json`), while option `-f` ensures
+the final output is redirected to the file-argument (`output.json`)
+
 
 
