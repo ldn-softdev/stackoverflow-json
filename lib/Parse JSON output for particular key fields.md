@@ -1,5 +1,5 @@
 ### Query: [Parse JSON output for particular key fields](https://stackoverflow.com/questions/59791160/parse-json-output-for-particular-key-fields)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Parse%20JSON%20output%20for%20particular%20key%20fields.md#a))
 
 I have the following JSON content in a file.json. 
 
@@ -17,7 +17,7 @@ How do only get the `web_url` field I am after?
 Unsure what's the ask here. It looks though like a banal addressing question:
 ```bash
 # to address the first match:
-bash $ <file.json jtc -w'<web_url>l'           # or equally <web_url>l0
+bash $ <file.json jtc -w'<web_url>l'           # or equally: <web_url>l0
 "https://gitlaboo.tests.com/sengk"
 bash $ 
 
