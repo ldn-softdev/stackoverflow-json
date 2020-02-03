@@ -41,6 +41,7 @@ forum:
 - [JSON parsing [jq]: Get value of grandparent’s sibling](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/JSON%20parsing%20jq%20-%20Get%20value%20of%20grandparent%E2%80%99s%20sibling.md)
 - [Json to csv using jq or any other bash command](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Json%20to%20csv%20using%20jq%20or%20any%20other%20bash%20command.md)
 - [adding json objects from one file to another under single array using jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/adding%20json%20objects%20from%20one%20file%20to%20another%20under%20single%20array%20using%20jq.md)
+- [Parse JSON output for particular key fields](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Parse%20JSON%20output%20for%20particular%20key%20fields.md)
 
 
 
