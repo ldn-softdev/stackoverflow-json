@@ -1,5 +1,5 @@
 ### Query: [How to parse json with jq where the structure is non-linear](https://stackoverflow.com/questions/59823154/how-to-parse-json-with-jq-where-the-structure-is-non-linear)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20parse%20json%20with%20jq%20where%20the%20structure%20is%20non-linear.md#a))
 
 I hope I have represented my problem clearly.
 Need help querying and them parsing multiple json files using JQ where the structure is non-linear within each file. The application produces config data that can look like this example. There can be zero or many of the DualEndPoint or Local objects per file.  I need to be able to query for a specific user in the "User" attribute and insert a new password for resubmission back to the api.  For DualEndPoints, the nested object names are variable so one cannot code those values in looking for the "User" attribute.
@@ -72,7 +72,8 @@ for clarity of the answer, the username and password will be handled though shel
 bash $ user='user1'
 bash $ passwd='new_passwd'
 bash $ 
-bash $ <file.json jtc -w'<PROFILE\d+>L:<>f[User]:<'$user'>:<>F' -p / -w'[User]:<'$user'>:[-1][Password]' -u'"'$passwd'"'
+bash $ <file.json jtc -pw'<PROFILE\d+>L:<>f[User]:<'$user'>:<>F' /\
+                      -w'[User]:<'$user'>:[-1][Password]' -u'"'$passwd'"'
 {
    "PROFILE1": {
       "Endpoint:Dest:SFTP_1": {
