@@ -65,7 +65,7 @@ bash $ <file.txt sed -E 's/(^[^:]+): (.*)/{"\1": "\2"}/; s/""/"/g'
 bash $ 
 ```
 
-Now, we can use `jtc` to sort the date and select the 3rd date from the 3 end of sorted:
+Now, we can use `jtc` to sort the dates and select the 3rd one from the end:
 ```bash
 bash $ <file.txt sed -E 's/(^[^:]+): (.*)/{"\1": "\2"}/; s/""/"/g' |\
                  jtc -J / -jw'[- date]:<>g:' / -w[-3:-2]
