@@ -36,7 +36,7 @@ The output is:
     date: option requires an argument: date
 
 ### A:
-Ideologically it would be wrong processing _yaml_ data non-yaml tools. However, just as a point of an exersice, let's do it with `sed`
+Ideologically it would be wrong to process _yaml_ data with non-yaml tools. However, just as a point of an exersice, let's do it with `sed`
 and [`jtc`](https://github.com/ldn-softdev/jtc).
 
 Given `jtc` works only with JSONs, we need to use `sed` to convert the above _yaml_ into a _stream of JSONs_:
