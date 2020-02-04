@@ -6,6 +6,7 @@ using [`jtc`](https://github.com/ldn-softdev/jtc) tool. All questions are taken 
 forum:
 
 
+- [Assign jq output to bash array](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Assign%20jq%20output%20to%20bash%20array.md)
 - [Trying to find date based on jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Trying%20to%20find%20date%20based%20on%20jq.md)
 - [How to jq to copy array inside the dictionary?](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20jq%20to%20copy%20array%20inside%20the%20dictionary.md)
 - [Issue when creating AWS fargate task definition json](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Issue%20when%20creating%20AWS%20fargate%20task%20definition%20json.md)
