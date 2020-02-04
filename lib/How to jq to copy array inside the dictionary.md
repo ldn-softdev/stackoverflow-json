@@ -30,7 +30,7 @@ How do I do this with jq?
 couple ways to do it with [`jtc`](https://github.com/ldn-softdev/jtc):
 ```bash
 # 1. update your JSON into a template read from <stdin>:
-bash $ <<<'{"buckets":0}' jtc -w[0] -u file.json
+bash $ <<<'{"buckets":[]}' jtc -w[0] -u file.json
 {
    "buckets": [
       {
@@ -42,6 +42,22 @@ bash $ <<<'{"buckets":0}' jtc -w[0] -u file.json
    ]
 }
 bash $ 
+
+# or, if you like to merge it with the pre-existing values in the array:
+bash $ <<<'{"buckets":["some pre-existing value"]}' jtc -w[0] -mi file.json
+{
+   "buckets": [
+      "some pre-existing value",
+      {
+         "name": "bucket1"
+      },
+      {
+         "name": "bucket1"
+      }
+   ]
+}
+bash $ 
+
 
 #2. wrap it using a template:
 bash $ jtc -T'{"buckets":{{}}}' file.json
