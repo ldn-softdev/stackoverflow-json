@@ -1,5 +1,5 @@
 ### Query: [How to jq to copy array inside the dictionary?](https://stackoverflow.com/questions/60045218/how-to-jq-to-copy-array-inside-the-dictionary)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20jq%20to%20copy%20array%20inside%20the%20dictionary.md#a))
 
 I have the following json
 
@@ -57,7 +57,7 @@ bash $ jtc -T'{"bukcets":{{}}}' file.json
 }
 bash $ 
 
-and if you like to make the changes right into ths file:
+# and if you like to make the changes right into ths file:
 bash $ jtc -T'{"bukcets":{{}}}' -f file.json 
 bash $ jtc file.json
 {
