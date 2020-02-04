@@ -36,7 +36,7 @@ The output is:
     date: option requires an argument: date
 
 ### A:
-Ideologically it would be wrong to process _yaml_ data with non-yaml tools. However, just as a point of an exersice, let's do it with `sed`
+Ideologically it would be wrong to process _yaml_ data with non-yaml tools. However, just as a point of an exercise, let's do it with `sed`
 and [`jtc`](https://github.com/ldn-softdev/jtc).
 
 Given `jtc` works only with JSONs, we need to use `sed` to convert the above _yaml_ into a _stream of JSONs_:
@@ -65,7 +65,7 @@ bash $ <file.txt sed -E 's/(^[^:]+): (.*)/{"\1": "\2"}/; s/""/"/g'
 bash $ 
 ```
 
-Now, we can use `jtc` to sort the date and lelect the 3rd date from the 3 end of sorted:
+Now, we can use `jtc` to sort the date and select the 3rd date from the 3 end of sorted:
 ```bash
 bash $ <file.txt sed -E 's/(^[^:]+): (.*)/{"\1": "\2"}/; s/""/"/g' |\
                  jtc -J / -jw'[- date]:<>g:' / -w[-3:-2]
