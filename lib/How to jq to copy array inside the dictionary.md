@@ -44,9 +44,9 @@ bash $ <<<'{"buckets":0}' jtc -w[0] -u file.json
 bash $ 
 
 #2. wrap it using a template:
-bash $ jtc -T'{"bukcets":{{}}}' file.json
+bash $ jtc -T'{"buckets":{{}}}' file.json
 {
-   "bukcets": [
+   "buckets": [
       {
          "name": "bucket1"
       },
@@ -58,10 +58,10 @@ bash $ jtc -T'{"bukcets":{{}}}' file.json
 bash $ 
 
 # and if you like to make the changes right into ths file:
-bash $ jtc -T'{"bukcets":{{}}}' -f file.json 
+bash $ jtc -T'{"buckets":{{}}}' -f file.json 
 bash $ jtc file.json
 {
-   "bukcets": [
+   "buckets": [
       {
          "name": "bucket1"
       },
