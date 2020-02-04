@@ -50,9 +50,8 @@ bash $ echo ${#array[@]}
 2
 bash $ echo ${array[1]}
 "In Queue"
-bash $ echo ${array[0]}
-6442
 bash $ 
+bash $ IFS="$ifs"             # let's not forget to restore IFS
 ```
 
 
