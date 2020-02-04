@@ -1,4 +1,4 @@
-### Query: [Convert large json file to csv with filter](https://stackoverflow.com/questions/tagged/jq%2bor%2bjson%2bbash?tab=Newest)
+### Query: [Convert large json file to csv with filter](https://stackoverflow.com/questions/60019809/convert-large-json-file-to-csv-with-filter)
 ([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Convert%20large%20json%20file%20to%20csv%20with%20filter.md#a))
 
 I need a script which helps me basically look for all json files in a directory and extract only one field from each and write them to a second csv file.
