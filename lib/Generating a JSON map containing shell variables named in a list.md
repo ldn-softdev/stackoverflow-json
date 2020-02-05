@@ -37,7 +37,7 @@ bash $
 bash $ export ENV_VAR_A='first token'
 bash $ export ENV_VAR_c='2nd token'
 bash $ 
-bash $ <tmp.txt sed -E 's/(.*)/{"\1": 0}/' | jtc -J / -w'<>a:<L>k' -eu echo '\""${L}"\"' \; / -w[:][0] -ljjr
+bash $ <tmp.txt sed -E 's/(.*)/{"\1": 0}/' | jtc -Jw'<>a:<L>k' -eu echo '\""${L}"\"' \; / -w[:][0] -ljjr
 { "ENV_VAR_A": "first token", "ENV_VAR_B": "2nd token", "ENV_VAR_C": "" }
 bash $ 
 ```
