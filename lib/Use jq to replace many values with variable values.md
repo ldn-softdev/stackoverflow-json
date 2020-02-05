@@ -1,5 +1,5 @@
 ### Query: [Use jq to replace many values with variable values](https://stackoverflow.com/questions/60061905/use-jq-to-replace-many-values-with-variable-values)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Use%20jq%20to%20replace%20many%20values%20with%20variable%20values.md#a))
 
 Using `jq`, is it possible to replace the value of each parameter in the sample JSON with the value of the variable that is the initial value?
 
