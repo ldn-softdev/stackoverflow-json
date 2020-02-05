@@ -1,5 +1,5 @@
 ### Query: [Generating a JSON map containing shell variables named in a list](https://stackoverflow.com/questions/59778578/generating-a-json-map-containing-shell-variables-named-in-a-list)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Generating%20a%20JSON%20map%20containing%20shell%20variables%20named%20in%20a%20list.md#a))
 
 My shell-fu is at a below-beginner level. I have a file that contains some lines that happen to be the names of environment variables.
 
