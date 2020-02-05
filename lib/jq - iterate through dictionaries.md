@@ -1,5 +1,5 @@
 ### Query: [jq - iterate through dictionaries](https://stackoverflow.com/questions/60060802/jq-iterate-through-dictionaries)
-([jump to the answer]())
+([jump to the answer](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20-%20iterate%20through%20dictionaries.md#a))
 
 My json knowledge is shaky, so pardon me if I use the wrong terminology.
 
