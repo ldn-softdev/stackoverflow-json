@@ -6,6 +6,7 @@ using [`jtc`](https://github.com/ldn-softdev/jtc) tool. All questions are taken 
 forum:
 
 
+- [Use jq to replace many values with variable values](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Use%20jq%20to%20replace%20many%20values%20with%20variable%20values.md)
 - [jq - iterate through dictionaries](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20-%20iterate%20through%20dictionaries.md)
 - [Assign jq output to bash array](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Assign%20jq%20output%20to%20bash%20array.md)
 - [Trying to find date based on jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Trying%20to%20find%20date%20based%20on%20jq.md)
