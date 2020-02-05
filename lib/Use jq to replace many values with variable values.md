@@ -65,6 +65,9 @@ bash $ <schema.json jtc -w'[value]:<^\$(.*)>R:' -eu echo '"${$1}"' \;
 }
 bash $ 
 ```
+\- the solution is input-invariant (will work even if JSON is placed into another JSON container, or if `value`s are scattered
+irregularly throughout JSON).
+\- it's also resistant to partial substitutions.
 
 
 
