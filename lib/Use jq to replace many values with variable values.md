@@ -69,5 +69,8 @@ bash $
 irregularly throughout JSON).
 \- it's also resistant to partial substitutions.
 
-
+To update the changes right into the file use `-f` option:
+```bash
+bash $ jtc -w'[value]:<^\$(.*)>R:' -eu echo '"${$1}"' \; -f schema.json
+```
 
