@@ -6,6 +6,7 @@ using [`jtc`](https://github.com/ldn-softdev/jtc) tool. All questions are taken 
 forum:
 
 
+- [jq - iterate through dictionaries](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20-%20iterate%20through%20dictionaries.md)
 - [Assign jq output to bash array](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Assign%20jq%20output%20to%20bash%20array.md)
 - [Trying to find date based on jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Trying%20to%20find%20date%20based%20on%20jq.md)
 - [How to jq to copy array inside the dictionary?](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20jq%20to%20copy%20array%20inside%20the%20dictionary.md)
