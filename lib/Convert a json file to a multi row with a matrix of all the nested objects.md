@@ -56,7 +56,7 @@ bash $ <file.json jtc
    ]
 }
 bash $ 
-bash $ <file.json jtc -w' ' -T'"Country\tState\tCity"'  -w'[:]<C>k[0][:]<S>k[:]' -qqT'"{C}\t{S}\t{}"'
+bash $ <file.json jtc -w' ' -T'"Country\tState\tCity"' -w'[:]<C>k[0][:]<S>k[:]' -qqT'"{C}\t{S}\t{}"'
 Country	State	City
 USA	FL	Miami
 USA	FL	Tampa
