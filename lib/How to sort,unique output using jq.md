@@ -40,7 +40,7 @@ Tried the blow. Does not work:
 the query here is only about sorting records by the record's inner labels
 1. to achieve the same output as in the question:
 ```bash
-bash $ <example.json jtc -w'[title]:<>g:[-1]' -tc
+bash $ <example.json jtc -w'[title]:<>g:[-1]'
 {
    "title": "A",
    "url": "https://A"
