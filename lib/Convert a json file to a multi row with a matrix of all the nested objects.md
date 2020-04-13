@@ -38,6 +38,24 @@ Thanks!
 The JSON above needs to be corrected, as it's invalid. Once corrected, then this is how it looks with
 [`jtc`](https://github.com/ldn-softdev/jtc): 
 ```bash
+bash $ <file.json jtc 
+{
+   "USA": [
+      {
+         "FL": [
+            "Miami",
+            "Tampa",
+            "Jacksonville"
+         ],
+         "NY": [
+            "NYC",
+            "Rochester",
+            "Syracuse"
+         ]
+      }
+   ]
+}
+bash $ 
 bash $ <file.json jtc -w' ' -T'"Country\tState\tCity"'  -w'[:]<C>k[0][:]<S>k[:]' -qqT'"{C}\t{S}\t{}"'
 Country	State	City
 USA	FL	Miami
