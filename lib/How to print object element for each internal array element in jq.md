@@ -61,6 +61,32 @@ bash $ <test.json jtc -w'<item2>l<I>v[-1][array1][:]' -qqT'"{I}, {$a}, \"{$b}\""
 123, 789, "teststring2"
 bash $ 
 ```
-
+if some value type in a column is non-consistent i.e., could be a _JSON string_ in one row and a non-string value in another,
+(like modified JSON below) and there's a requirement to keep the original format type, then use this template format:
+```bash
+bash $ <test.json jtc 
+[
+   {
+      "item1": {
+         "array1": [
+            {
+               "item3": 456,
+               "item4": "teststring"
+            },
+            {
+               "item3": 789,
+               "item4": null
+            }
+         ],
+         "item2": 123
+      }
+   }
+]
+bash $ 
+bash $ <test.json jtc -w'<item2>l<I>v[-1][array1][:]' -qqT'"{I}, {$a}, >{{$b}}<"'
+123, 456, "teststring"
+123, 789, null
+bash $ 
+```
 
 
