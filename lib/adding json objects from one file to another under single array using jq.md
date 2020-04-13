@@ -83,7 +83,7 @@ bash $ jtc output.json
 ]
 bash $ 
 ```
-\- the bare hyphen `-` is needed to ensure that source JSON is read from <stdin>, (i.e. from `<File_1.json`), while option `-f` ensures
+\- the bare hyphen `-` is needed to ensure that source JSON is read from `<stdin>`, (i.e. from `<File_1.json`), while option `-f` ensures
 the final output is redirected to the file-argument (`output.json`)
 
 
