@@ -26,7 +26,7 @@ bash $ echo '["123", "456"]' | jtc -qqT'"array={}"'
 array=123, 456
 bash $ 
 ```
-If the spacer after comma (`, `) is redundant, then alter the _namespace_ holding a default separator for array stringification:
+If the spacer after comma (`, `) is redundant, then alter the _namespace_ `$#` holding a default separator for array stringification:
 ```bash
 bash $ echo '["123", "456"]' | jtc -w'<$#:,>v' -qqT'"array={}"'
 array=123,456
