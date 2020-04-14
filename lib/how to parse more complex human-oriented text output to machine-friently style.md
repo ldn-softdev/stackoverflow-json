@@ -9,67 +9,67 @@ We have this command, which shows data about audio inputs:
 
 it prints something like this:
 
-    2 sink input(s) available.
-        index: 144
-    	driver: <protocol-native.c>
-    	flags: 
-    	state: RUNNING
-    	sink: 4 <alsa_output.pci-0000_05_00.0.analog-stereo>
-    	volume: front-left: 15728 /  24% / -37.19 dB,   front-right: 15728 /  24% / -37.19 dB
-    	        balance 0.00
-    	muted: no
-    	current latency: 70.48 ms
-    	requested latency: 210.00 ms
-    	sample spec: float32le 2ch 44100Hz
-    	channel map: front-left,front-right
-    	             Stereo
-    	resample method: copy
-    	module: 13
-    	client: 245 <MPlayer>
-    	properties:
-    		media.name = "UNREAL! Tetris Theme on Violin and Guitar-TnDIRr9C83w.webm"
-    		application.name = "MPlayer"
-    		native-protocol.peer = "UNIX socket client"
-    		native-protocol.version = "32"
-    		application.process.id = "1543"
-    		application.process.user = "mmucha"
-    		application.process.host = "vbDesktop"
-    		application.process.binary = "mplayer"
-    		application.language = "C"
-    		window.x11.display = ":0"
-    		application.process.machine_id = "720184179caa46f0a3ce25156642f7a0"
-    		application.process.session_id = "2"
-    		module-stream-restore.id = "sink-input-by-application-name:MPlayer"
-        index: 145
-    	driver: <protocol-native.c>
-    	flags: 
-    	state: RUNNING
-    	sink: 4 <alsa_output.pci-0000_05_00.0.analog-stereo>
-    	volume: front-left: 24903 /  38% / -25.21 dB,   front-right: 24903 /  38% / -25.21 dB
-    	        balance 0.00
-    	muted: no
-    	current latency: 70.50 ms
-    	requested latency: 210.00 ms
-    	sample spec: float32le 2ch 48000Hz
-    	channel map: front-left,front-right
-    	             Stereo
-    	resample method: speex-float-1
-    	module: 13
-    	client: 251 <MPlayer>
-    	properties:
-    		media.name = "Trombone Shorty At Age 13 - 2nd Line-k9YUi3UhEPQ.webm"
-    		application.name = "MPlayer"
-    		native-protocol.peer = "UNIX socket client"
-    		native-protocol.version = "32"
-    		application.process.id = "2831"
-    		application.process.user = "mmucha"
-    		application.process.host = "vbDesktop"
-    		application.process.binary = "mplayer"
-    		application.language = "C"
-    		window.x11.display = ":0"
-    		application.process.machine_id = "720184179caa46f0a3ce25156642f7a0"
-    		application.process.session_id = "2"
-    		module-stream-restore.id = "sink-input-by-application-name:MPlayer"
+2 sink input(s) available.
+    index: 144
+    driver: <protocol-native.c>
+    flags: 
+    state: RUNNING
+    sink: 4 <alsa_output.pci-0000_05_00.0.analog-stereo>
+    volume: front-left: 15728 /  24% / -37.19 dB,   front-right: 15728 /  24% / -37.19 dB
+            balance 0.00
+    muted: no
+    current latency: 70.48 ms
+    requested latency: 210.00 ms
+    sample spec: float32le 2ch 44100Hz
+    channel map: front-left,front-right
+                 Stereo
+    resample method: copy
+    module: 13
+    client: 245 <MPlayer>
+    properties:
+        media.name = "UNREAL! Tetris Theme on Violin and Guitar-TnDIRr9C83w.webm"
+        application.name = "MPlayer"
+        native-protocol.peer = "UNIX socket client"
+        native-protocol.version = "32"
+        application.process.id = "1543"
+        application.process.user = "mmucha"
+        application.process.host = "vbDesktop"
+        application.process.binary = "mplayer"
+        application.language = "C"
+        window.x11.display = ":0"
+        application.process.machine_id = "720184179caa46f0a3ce25156642f7a0"
+        application.process.session_id = "2"
+        module-stream-restore.id = "sink-input-by-application-name:MPlayer"
+    index: 145
+    driver: <protocol-native.c>
+    flags: 
+    state: RUNNING
+    sink: 4 <alsa_output.pci-0000_05_00.0.analog-stereo>
+    volume: front-left: 24903 /  38% / -25.21 dB,   front-right: 24903 /  38% / -25.21 dB
+            balance 0.00
+    muted: no
+    current latency: 70.50 ms
+    requested latency: 210.00 ms
+    sample spec: float32le 2ch 48000Hz
+    channel map: front-left,front-right
+                 Stereo
+    resample method: speex-float-1
+    module: 13
+    client: 251 <MPlayer>
+    properties:
+        media.name = "Trombone Shorty At Age 13 - 2nd Line-k9YUi3UhEPQ.webm"
+        application.name = "MPlayer"
+        native-protocol.peer = "UNIX socket client"
+        native-protocol.version = "32"
+        application.process.id = "2831"
+        application.process.user = "mmucha"
+        application.process.host = "vbDesktop"
+        application.process.binary = "mplayer"
+        application.language = "C"
+        window.x11.display = ":0"
+        application.process.machine_id = "720184179caa46f0a3ce25156642f7a0"
+        application.process.session_id = "2"
+        module-stream-restore.id = "sink-input-by-application-name:MPlayer"
 
 very nice. But we don't want to show user all of this, we just want to show index (id of input), application.process.id, application.name and media.name, in some reasonable format. It would be great to parse it _somehow_ to json, but even if I preprocess it somehow, the `jq` is way beyond my capabilities and quite complex. I tried multiple approaches using jq, with regex or without, but I wasn't able to finish it. And I guess we cannot rely on order or presence of all fields.
 
