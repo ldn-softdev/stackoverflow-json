@@ -9,6 +9,7 @@ We have this command, which shows data about audio inputs:
 
 it prints something like this:
 
+```
 2 sink input(s) available.
     index: 144
     driver: <protocol-native.c>
@@ -70,6 +71,7 @@ it prints something like this:
         application.process.machine_id = "720184179caa46f0a3ce25156642f7a0"
         application.process.session_id = "2"
         module-stream-restore.id = "sink-input-by-application-name:MPlayer"
+```
 
 very nice. But we don't want to show user all of this, we just want to show index (id of input), application.process.id, application.name and media.name, in some reasonable format. It would be great to parse it _somehow_ to json, but even if I preprocess it somehow, the `jq` is way beyond my capabilities and quite complex. I tried multiple approaches using jq, with regex or without, but I wasn't able to finish it. And I guess we cannot rely on order or presence of all fields.
 
