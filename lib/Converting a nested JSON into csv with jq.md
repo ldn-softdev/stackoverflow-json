@@ -53,7 +53,7 @@ would be to linearize each record and then template-interpolate it:
 bash $ hdr='"number,firstName,lastName,gender,age,streetAddress,city,state,postalCode"'
 bash $ 
 bash $ <file.json jtc -w[:] -pi[:][address] -T'{{}}' /\
-                      -nw' ' -qqT"$hdr" -w'[:]<L>k' -T'"{L},{$c},{$e},{$d},{$a},{$h},{$b},{$g},{$f}"'
+                      -w' ' -qqT"$hdr" -w'[:]<L>k' -T'"{L},{$c},{$e},{$d},{$a},{$h},{$b},{$g},{$f}"'
 number,firstName,lastName,gender,age,streetAddress,city,state,postalCode
 one,John,Smith,man,32,21 2nd Street,New York,NY,10021
 two,Johnny,Smithy,man,33,22 2nd Street,New York,NY,10021
@@ -97,6 +97,7 @@ bash $ <file.json jtc -w[:] -pi[:][address] -T'{{}}'
   - `-w' ' -T"$hdr" `: prints the header (walk `-w' '` is dummy) via template
   - `-w'[:]<L>k' -T'"{L},{$c},{$e},{$d},{$a},{$h},{$b},{$g},{$f}"'`: walks each object (`[:]`) and memorizes its label (`<L>k`) into the
   _namespace_ `L`, then template-interpolates each record using auto-tokens and the namespace `L` in the required order
+  - `-qq` drops the outer quotation marks of the results
 
 
 
