@@ -66,4 +66,15 @@ USA	NY	Rochester
 USA	NY	Syracuse
 bash $ 
 ```
+**Explanations:**
+- here, each template is per each walk, thus first walk `-w' '` is dummy - it only facilitates the header template
+- second walk:
+  - `[:]<C>k` : walk each top object and memorize its label (country) into the _namespace_ `C`
+  - `[0][:]<S>k`: descend into the 1st element (the structure it seems superfluous), then for each iterable (object) memorise its label (state) into the _namespace_ `K`
+  - `[:]`: iterate over each city
+- template-interpolate country (`C`), state (`S`) and city (last walked element - `{}`) using `-T'"{C}\t{S}\t{}"'`
+- `-qq`: drop the outer quotation marks from the result 
+
+
+
 
