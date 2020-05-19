@@ -39,4 +39,8 @@ bash $ <example.json jtc -w'[key]:<known_value>[-4][gp_sibling]'
 bash $ 
 ```
 
+walk path explained:
+- `[key]:<known_value>`: find `known_value` attached to the label `"key"`
+- `[-4]`: go 4 parents up (the json tree from the found value)
+- `[gp_sibling]` - address by `"gp_sibling"` label
 
