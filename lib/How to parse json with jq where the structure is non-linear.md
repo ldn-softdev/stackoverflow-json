@@ -118,6 +118,19 @@ bash $ <file.json jtc -pw'<PROFILE\d+>L:<>f[User]:<'$user'><>F' /\
 bash $ 
 ```
 
+**Explanation:**
+1. first option-set:
+  - walk path `-w'<PROFILE\d+>L:<>f[User]:<'$user'><>F'`: finds by the label each entry matching RE `PROFILE\d+`, then sets a branching
+  point (`<>f`):
+    - if the found entry contains the record `"User":"user1" `(`[User]:<'$user'>` matched), then such entry is skipped (`<>F`) 
+    and the walk continues to the next iteration
+    - if the found entry does not contain the user record - then the entire entry is matched (`<>f` triggered)
+  - so, all matched entries (i.e., those where no user record found) are getting purged (`-p`) effectively leaving only those where
+  user record is found
+2. second option-set:
+  - `-w '[User]:<'$user'>:[-1][Password]'`: finds each record `"User":"user1"` (lexeme `[User]:<'$user'>:`) then selects its
+  immediate parent (`[-1]`) and then select entry by the label `[Password]` and 
+  - updates it with the password `-u'"'$passwd'"'`
 
 
 
