@@ -81,3 +81,6 @@ bash $ <sample.json jtc -w'<candles>l[:]' -qqT'"{}"'
 bash $ 
 ```
 
+- `-w'<candles>l[:]'`: _walks_ every array in `"candles"`
+- `-T'"{}"'`: will interpolate the array into a _string_
+- `-qq`: drops the outer quotation marks of the result
