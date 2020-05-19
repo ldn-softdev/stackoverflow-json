@@ -37,28 +37,21 @@ Expected Output
 I have tried using -s(slurp) but since the code will be running once for every minute its creating multiple arrays. 
 
 ### A:
-Because the input here is a stream of JSONs, [`jtc`](https://github.com/ldn-softdev/jtc) cannot insert it using `-i` or `-u`, it then
-must be processed as input, but it's not a probelm. Then the solution is: take the input JSON stream, JSONize it into an array,
-insert into the resultng json the output file and preserve the final result in the output file:
-```bash
-# for the sake of example, let's assume that output.json looks like this:
-bash $ jtc output.json 
-[
-   {
-      "Age": "55",
-      "Id": "3",
-      "Name": "Blah"
-   },
-   {
-      "Age": "66",
-      "Id": "4",
-      "Name": "Blah-Blah"
-   }
-]
+As of _`v1.76`_ jtc is capable of processing a _stream of JSONs_ given as a file argument to either of options `-i` / `-u`. Given that
+capability the query is super easy:  
 
-# the solution:
-bash $ <File_1.json jtc - -J / -mi output.json -f output.json
-bash $ jtc output.json
+let's start with an empty array in the `output.json` file:
+```bash
+bash $ <output.json jtc
+[]
+bash $ 
+```
+
+To add then to the file is trivial:
+```bash
+bash $ jtc -mi file_1.json -f output.json 
+bash $ 
+bash $ <output.json jtc
 [
    {
       "Age": "12",
@@ -69,22 +62,13 @@ bash $ jtc output.json
       "Age": "22",
       "Id": "2",
       "Name": "Dileep"
-   },
-   {
-      "Age": "55",
-      "Id": "3",
-      "Name": "Blah"
-   },
-   {
-      "Age": "66",
-      "Id": "4",
-      "Name": "Blah-Blah"
    }
 ]
 bash $ 
 ```
-\- the bare hyphen `-` is needed to ensure that source JSON is read from `<stdin>`, (i.e. from `<File_1.json`), while option `-f` ensures
-the final output is redirected to the file-argument (`output.json`)
+
+- `-m` ensures _merging_ of the input array (stream) of JSONs in `file_1.json` to the input file (`output.json`)
+- `-f` forces / redirects the output into the input file `output.json` instead of <stdout>
 
 
 
