@@ -70,5 +70,34 @@ bash $
 - `-m` ensures _merging_ of the input array (stream) of JSONs in `file_1.json` to the input file (`output.json`)
 - `-f` forces / redirects the output into the input file `output.json` instead of <stdout>
 
+If the same command executed once more - observe the extended array:
+```bash
+bash $ jtc -mi file_1.json -f output.json 
+bash $ 
+bash $ <output.json jtc
+[
+   {
+      "Age": "12",
+      "Id": "1",
+      "Name": "Kiran"
+   },
+   {
+      "Age": "22",
+      "Id": "2",
+      "Name": "Dileep"
+   },
+   {
+      "Age": "12",
+      "Id": "1",
+      "Name": "Kiran"
+   },
+   {
+      "Age": "22",
+      "Id": "2",
+      "Name": "Dileep"
+   }
+]
+bash $ 
+```
 
 
