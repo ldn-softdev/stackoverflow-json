@@ -55,31 +55,32 @@ The alternative operator does exactly what I was looking for.
 \- to accomplish the ask with [`jtc`](https://github.com/ldn-softdev/jtc): make individual walks for each entry 
 which might go missing, ensuring that in such case an empty string (`""`) is the result, and then template-interpolate it:
 ```bash
-bash $ <input.json jtc -jaw'<id>l<V>v' -T{{V}} -w'<V:>f[t]:<1>d<V>v' -w'<V:>f[t]:<2>d<V>v' / -qqT'"{}"'
-100, 1, 2
-200, , 2
-300, 1, 
+bash $ <input.json jtc -jaw'<id>l<V>v' -T{{V}} -w'<V:>f[t]:<1>d[-1][c]<V>v' -w'<V:>f[t]:<2>d[-1][c]<V>v' / -qqT'"{}"'
+100, 2, 3
+200, , 3
+300, 3, 
 bash $ 
 ```
 
 if the default spacer between commas is undesirable, then alter it by updating `$#` namespace:
 ```bash
-bash $ <input.json jtc -jaw'<id>l<V>v' -T{{V}} -w'<V:>f[t]:<1>d<V>v' -w'<V:>f[t]:<2>d<V>v' / -qqT'"{}"' -w'<$#:,>v'
-100,1,2
-200,,2
-300,1,
+bash $ <input.json jtc -jaw'<id>l<V>v' -T{{V}} -w'<V:>f[t]:<1>d[-1][c]<V>v' -w'<V:>f[t]:<2>d[-1][c]<V>v' / -qqT'"{}"' -w'<$#:,>v'
+100,2,3
+200,,3
+300,3,
 bash $ 
 ```
 
 and with the header:
 ```bash
 bash $ hdr='"id,t1,t2"'
-bash $ <input.json jtc -Jjw'<id>l<V>v' -T{{V}} -w'<V:>f[t]:<1>d<V>v' -w'<V:>f[t]:<2>d<V>v' /\
-                       -w'<$#:,>v' -T$hdr -w[:] -qqT'"{}"' 
+bash $ <input.json jtc -Jjw'<id>l<V>v' -T{{V}} -w'<V:>f[t]:<1>d[-1][c]<V>v' -w'<V:>f[t]:<2>d[-1][c]<V>v' /\
+>                        -w'<$#:,>v' -T$hdr -w[:] -qqT'"{}"' 
 id,t1,t2
-100,1,2
-200,,2
-300,1,
+100,2,3
+200,,3
+300,3,
+
 bash $ 
 ```
 
@@ -87,17 +88,17 @@ bash $
 1. the first option-set is made of 3 walks and one (common) template (`-T{{V}}`) - the template just iterpolates an entry
 from the namespace `V`. Each walk sets the namespave `V` differently:
     - `-w'<id>l<V>v'`: finds an entry by the label (`<id>l`) and sets the namespace `V` to the found entry
-    - `-w'<V:>f[t]:<1>d<V>v'`: sets the branching point and also sets the namespace `V` to an empty value (`<V:>f`), then:
-      - if value `"t":1` found (`[t]:<1>d`) then records the value into the namespace `V` (<V>v)
+    - `-w'<V:>f[t]:<1>d[-1][c]<V>v'`: sets the branching point and also sets the namespace `V` to an empty value (`<V:>f`), then:
+      - if value `"t":1` found (`[t]:<1>d`) then select its sibling `c` (`[-1][c]`) and record the value into the namespace `V` (`<V>v`)
       - else (the value is not found) just breaks out of the walk, effecively leaving the namespace `V` empty (`""`)
-    - `-w'<V:>f[t]:<2>d<V>v'`: does the same as the prior walk just for the entry `"t":2`
+    - `-w'<V:>f[t]:<2>d[-1][c]<V>v'`: does the same as the prior walk just for the entry `"t":2`
     - `-Jj` ensures that each walking each entry in the input JSON stream is jsonized int array and then all entries also jsonized,
     so the output of the 1st option-set is this:
     ```bash
     [
-       [ 100, 1, 2 ],
-       [ 200, "", 2 ],
-       [ 300, 1, "" ]
+       [ 100, 2, 3 ]
+       [ 200, "", 3 ]
+       [ 300, 3, "" ]
     ]
     ```
 2. the second option-set:
@@ -107,9 +108,9 @@ from the namespace `V`. Each walk sets the namespave `V` differently:
     producting the output:
     ```bash
     "id,t1,t2"
-    "100,1,2"
-    "200,,2"
-    "300,1,"
+    "100,2,3"
+    "200,,3"
+    "300,3,"
     ```
     - `-qq` drops the outer quotation marks      
   
