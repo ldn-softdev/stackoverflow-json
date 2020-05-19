@@ -60,7 +60,43 @@ two,Johnny,Smithy,man,33,22 2nd Street,New York,NY,10021
 bash $ 
 ```
 
-
+**Explanation:**
+- the firs option set linearizes each of the top objects by _moving_ into the destination points `address` objects:
+```bash
+bash $ <file.json jtc -w[:] -pi[:][address] -T'{{}}'
+{
+   "one": {
+      "age": 32,
+      "city": "New York",
+      "firstName": "John",
+      "gender": "man",
+      "lastName": "Smith",
+      "postalCode": "10021",
+      "state": "NY",
+      "streetAddress": "21 2nd Street"
+   },
+   "two": {
+      "age": 33,
+      "city": "New York",
+      "firstName": "Johnny",
+      "gender": "man",
+      "lastName": "Smithy",
+      "postalCode": "10021",
+      "state": "NY",
+      "streetAddress": "22 2nd Street"
+   }
+}
+```
+  - `-w[:]` these insertion (destination) points
+  - `-pi[:][address] -T'{{}}'`: moves (insert and then purge) each `address` object into _destination points_. Though it's a bit tricky: 
+  it requires a template `{{}}` - why? If there wasn't such template (which represents the entire `address` object) then 
+  `address` object gets inserted into the iterable where `address` object already exists, so _no actual insertion_ occurs. If such
+  template applied - then insertion occurs of the standalone "_lableless_" object (thus, such template anonymizes the object) - and
+  in such case the standalone object gets fully inserted.
+- the second option set:
+  - `-w' ' -T"$hdr" `: prints the header (walk `-w' '` is dummy) via template
+  - `-w'[:]<L>k' -T'"{L},{$c},{$e},{$d},{$a},{$h},{$b},{$g},{$f}"'`: walks each object (`[:]`) and memorizes its label (`<L>k`) into the
+  _namespace_ `L`, then template-interpolates each record using auto-tokens and the namespace `L` in the required order
 
 
 
