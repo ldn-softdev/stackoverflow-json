@@ -47,7 +47,7 @@ bash $ <tmp.txt sed -E 's/(.*)/{"\1": 0}/' | jtc -Jw'[0]<L>k' -eu echo '\""${L}"
 bash $ 
 ```
 
-Explanation:
+**Explanation**:
 - the first option-set `jtc -Jw'[0]<L>k' -eu echo '\""${L}"\"' \;`: memorizes the label of the input JSON (which is env. var) and
 updates the value with the shell-evaluated output for the given variable (combining all the processed outputs in one JSON array): 
 ```bash
