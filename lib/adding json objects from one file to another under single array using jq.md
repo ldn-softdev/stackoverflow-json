@@ -37,7 +37,7 @@ Expected Output
 I have tried using -s(slurp) but since the code will be running once for every minute its creating multiple arrays. 
 
 ### A:
-As of _`v1.76`_ jtc is capable of processing a _stream of JSONs_ given as a file argument to either of options `-i` / `-u`. Given that
+As of _`v1.76`_ [`jtc`](https://github.com/ldn-softdev/jtc) is capable of processing a _stream of JSONs_ given as a file argument to either of options `-i` / `-u`. Given that
 capability the query is super easy:  
 
 let's start with an empty array in the `output.json` file:
