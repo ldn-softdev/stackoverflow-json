@@ -75,7 +75,7 @@ and with the header:
 ```bash
 bash $ hdr='"id,t1,t2"'
 bash $ <input.json jtc -Jjw'<id>l<V>v' -T{{V}} -w'<V:>f[t]:<1>d[-1][c]<V>v' -w'<V:>f[t]:<2>d[-1][c]<V>v' /\
->                        -w'<$#:,>v' -T$hdr -w[:] -qqT'"{}"' 
+                       -w'<$#:,>v' -T$hdr -w[:] -qqT'"{}"' 
 id,t1,t2
 100,2,3
 200,,3
