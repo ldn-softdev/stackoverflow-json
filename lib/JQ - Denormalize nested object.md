@@ -75,7 +75,7 @@ and with the header:
 ```bash
 bash $ hdr='"id,t1,t2"'
 bash $ <input.json jtc -Jjw'<id>l<V>v' -T{{V}} -w'<V:>f[t]:<1>d<V>v' -w'<V:>f[t]:<2>d<V>v' /\
-                      -nw'<$#:,>v' -T$hdr -w[:] -qqT'"{}"' 
+                       -w'<$#:,>v' -T$hdr -w[:] -qqT'"{}"' 
 id,t1,t2
 100,1,2
 200,,2
@@ -83,5 +83,35 @@ id,t1,t2
 bash $ 
 ```
 
+**Explanation:**
+1. the first option-set is made of 3 walks and one (common) template (`-T{{V}}`) - the template just iterpolates an entry
+from the namespace `V`. Each walk sets the namespave `V` differently:
+    - `-w'<id>l<V>v'`: finds an entry by the label (`<id>l`) and sets the namespace `V` to the found entry
+    - `-w'<V:>f[t]:<1>d<V>v'`: sets the branching point and also sets the namespace `V` to an empty value (`<V:>f`), then:
+      - if value `"t":1` found (`[t]:<1>d`) then records the value into the namespace `V` (<V>v)
+      - else (the value is not found) just breaks out of the walk, effecively leaving the namespace `V` empty (`""`)
+    - `-w'<V:>f[t]:<2>d<V>v'`: does the same as the prior walk just for the entry `"t":2`
+    - `-Jj` ensures that each walking each entry in the input JSON stream is jsonized int array and then all entries also jsonized,
+    so the output of the 1st option-set is this:
+    ```bash
+    [
+       [ 100, 1, 2 ],
+       [ 200, "", 2 ],
+       [ 300, 1, "" ]
+    ]
+    ```
+2. the second option-set:
+    - `-w'<$#:,>v' -T$hdr`: the walk sets the internal namespace constrollig the separator for the array interpolations (`$#`)
+    to the custom value `","` (instead of default `", "`) and the template for this walk prints the header (`-T$hdr`)
+    - `-w[:] -T'"{}"'`: goes over each array entry (in the output form the 1st option-set) and interpolates the array into the string,
+    producting the output:
+    ```bash
+    "id,t1,t2"
+    "100,1,2"
+    "200,,2"
+    "300,1,"
+    ```
+    - `-qq` drops the outer quotation marks      
+  
 
 
