@@ -182,10 +182,12 @@ put them all in the array, so JSON output looks like this after the 1st set:
    { "file_name": "/var/log/suricata/eve-ips.json", "log_group_name": "{{grains.environment_full}}SuricataIPS", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%dT%H:%M:%S.%f+0000", "timezone": "UTC" }
 ]
 ```
-- in the 2nd options set `-w'<J>v' -u web.json`: first the entire prior JSON output is getting memorized in the _namespase_ `J` and
-then replaced with the JSON from file `-u web.json`
+- in the 2nd options set `-w'<J>v' -u web.json`: first the entire prior JSON output is getting memorized in the _namespase_ `J`
+(`-w'<J>v'`) and then replaced with the JSON from file `-u web.json`
 - the third option-set `-w'<collect_list>l' -u{{J}}`: updates (replaces) memorized array in the namespace `J` (`-u{{J}}`) 
 into the `collect_list` of the current input (which is the JSON from `web.json` as per the 2nd option-set)
+
+
 
 
 
