@@ -40,7 +40,7 @@ forum:
 - [/usr/bin/jq: Argument list too long error bash](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20-%20Argument%20list%20too%20long%20error%20bash.md)
 - [How to find and replace a value with jq in a nested json](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20find%20and%20replace%20a%20value%20with%20jq%20in%20a%20nested%20json.md)
 - [How to sort/unique output using jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20sort,unique%20output%20using%20jq.md)
-- [JQ - Denormalize nested object](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/JQ%20-%20Denormalize%20nested%20object.md)
+- [JSON - Denormalize nested object](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/JQ%20-%20Denormalize%20nested%20object.md)
 - [How to parse json with jq where the structure is non-linear](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20parse%20json%20with%20jq%20where%20the%20structure%20is%20non-linear.md)
 - [Converting a nested JSON into csv with jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Converting%20a%20nested%20JSON%20into%20csv%20with%20jq.md)
 - [Convert a json file to a multi row with a matrix of all the nested objects](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Convert%20a%20json%20file%20to%20a%20multi%20row%20with%20a%20matrix%20of%20all%20the%20nested%20objects.md)
