@@ -39,7 +39,7 @@ forum:
 - [Verifying existence of a root level element with jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Verifying%20existence%20of%20a%20root%20level%20element%20with%20jq.md)
 - [/usr/bin/jq: Argument list too long error bash](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20-%20Argument%20list%20too%20long%20error%20bash.md)
 - [How to find and replace a value with jq in a nested json](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20find%20and%20replace%20a%20value%20with%20jq%20in%20a%20nested%20json.md)
-- [How to sort/unique output using jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20sort,unique%20output%20using%20jq.md)
+- [How to sort/unique JSON output using jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20sort,unique%20output%20using%20jq.md)
 - [JSON - Denormalize nested object](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/JQ%20-%20Denormalize%20nested%20object.md)
 - [How to parse json with jq where the structure is non-linear](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20parse%20json%20with%20jq%20where%20the%20structure%20is%20non-linear.md)
 - [Converting a nested JSON into csv with jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Converting%20a%20nested%20JSON%20into%20csv%20with%20jq.md)
