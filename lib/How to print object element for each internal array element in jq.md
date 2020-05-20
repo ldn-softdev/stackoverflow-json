@@ -88,5 +88,6 @@ bash $ <test.json jtc -w'<item2>l<I>v[-1][array1][:]' -qqT'"{I}, {$a}, >{{$b}}<"
 123, 789, null
 bash $ 
 ```
-
+- stringification `>{{$b}}<` ensures that quotation marks will be preserved in case if it's a _string_ value, and thus upon 
+jsonization (-qq) will be shown
 
