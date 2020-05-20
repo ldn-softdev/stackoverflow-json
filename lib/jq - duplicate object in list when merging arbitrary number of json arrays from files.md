@@ -148,20 +148,20 @@ A lot more interesting ask would be this: say, the number of json files in the f
 it would be a lot handier solution to include `*.json` files as an argument. The only requirement here would be to know just one
 file name, e.g.: `web.json`  
 Then the solution is this:
-1. read all records from `collect_list` from every JSON file (and build a JAON containing the entire collection)
+1. read all records from `collect_list` from every JSON file (and build a JSON containing the entire collection)
 2. then swap out resulting collection with the known file name
 3. and replace in the file its `collect_list` with the built one.
 ```bash
-bash $ jtc -Jw'<collect_list>l[:]' / -w'<J>v' -u web.json / -w'<collect_list>l' -u0 -T{{J}} -tc *.json
+bash $ jtc -Jw'<collect_list>l[:]' / -w'<J>v' -u web.json / -w'<collect_list>l' -u{{J}} -tc *.json 
 {
    "logs": {
       "logs_collected": {
          "files": {
             "collect_list": [
-               { "file_name": "/var/log/suricata/eve-ips.json", "log_group_name": "{{grains.environment_full}}SuricataIPS", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%dT%H:%M:%S.%f+0000", "timezone": "UTC" },
                { "file_name": "/var/log/company/company-json.log", "log_group_name": "{{grains.environment_full}}Play", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%dT%H:%M:%S.%fZ", "timezone": "UTC" },
                { "file_name": "/var/log/company/company-notifications.log", "log_group_name": "{{grains.environment_full}}Notifications", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%dT%H:%M:%S.%fZ", "timezone": "UTC" },
-               { "file_name": "/var/ossec/logs/alerts/alerts.json", "log_group_name": "{{grains.environment_full}}OSSEC", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%d %H:%M:%S", "timezone": "UTC" }
+               { "file_name": "/var/ossec/logs/alerts/alerts.json", "log_group_name": "{{grains.environment_full}}OSSEC", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%d %H:%M:%S", "timezone": "UTC" },
+               { "file_name": "/var/log/suricata/eve-ips.json", "log_group_name": "{{grains.environment_full}}SuricataIPS", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%dT%H:%M:%S.%f+0000", "timezone": "UTC" }
             ]
          }
       }
@@ -170,5 +170,22 @@ bash $ jtc -Jw'<collect_list>l[:]' / -w'<J>v' -u web.json / -w'<collect_list>l' 
 bash $ 
 ```
 The advantage of such solution that it let handling any number of files as long they share the same schema:
+
+**Explanation for the extended solution:**
+- in the first option-set: `-Jw'<collect_list>l[:]'`: read each items from `collect_list` from every json (argument `*.json`) and
+put them all in the array, so JSON output looks like this after the 1st set:
+```bash
+[
+   { "file_name": "/var/log/company/company-json.log", "log_group_name": "{{grains.environment_full}}Play", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%dT%H:%M:%S.%fZ", "timezone": "UTC" },
+   { "file_name": "/var/log/company/company-notifications.log", "log_group_name": "{{grains.environment_full}}Notifications", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%dT%H:%M:%S.%fZ", "timezone": "UTC" },
+   { "file_name": "/var/ossec/logs/alerts/alerts.json", "log_group_name": "{{grains.environment_full}}OSSEC", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%d %H:%M:%S", "timezone": "UTC" },
+   { "file_name": "/var/log/suricata/eve-ips.json", "log_group_name": "{{grains.environment_full}}SuricataIPS", "log_stream_name": "{{grains.id}}", "timestamp_format": "%Y-%m-%dT%H:%M:%S.%f+0000", "timezone": "UTC" }
+]
+```
+- in the 2nd options set `-w'<J>v' -u web.json`: first the entire prior JSON output is getting memorized in the _namespase_ `J` and
+then replaced with the JSON from file `-u web.json`
+- the third option-set `-w'<collect_list>l' -u{{J}}`: updates (replaces) memorized array in the namespace `J` (`-u{{J}}`) 
+into the `collect_list` of the current input (which is the JSON from `web.json` as per the 2nd option-set)
+
 
 
