@@ -60,7 +60,7 @@ However, if it's required to process a stream of JSONs with the memory constrain
 in a _streamed_ way: `jtc` switches to a _streamed_ read once the input is `<stdin>` and option `-a` given, then the memory will be
 consumed only for 1 JSON at most upon parsing:
 ```bash
-bash $ cat stream.json | jtc -aw'[datetime]:<^2019>R[-1]' / -J
+bash $ jtc -aw'[datetime]:<^2019>R[-1]' / -J stream.json
 [
    {
       "ID": "123455",
