@@ -128,3 +128,6 @@ bash $ <input.json jtc -w'<$crypto>l:[-1]' -u"$ev"
 bash $ 
 ```
 
+- `-w'<$crypto>l:[-1]'`: find _each_ occurence of a label `$crypto` (`<$crypto>l:`) and once found go to its parent (`[-1]`)
+- for each found entry, replace it with the env. variable (`-u"$ev"`)
+
