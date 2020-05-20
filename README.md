@@ -36,7 +36,7 @@ forum:
 - [I want to represent json data In Column format](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/I%20want%20to%20represent%20json%20data%20In%20Column%20format.md)
 - [jq - duplicate object in list when merging arbitrary number of json arrays from files](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20-%20duplicate%20object%20in%20list%20when%20merging%20arbitrary%20number%20of%20json%20arrays%20from%20files.md)
 - [How to print object element for each internal array element in jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20print%20object%20element%20for%20each%20internal%20array%20element%20in%20jq.md)
-- [Verifying existence of a root level element with jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Verifying%20existence%20of%20a%20root%20level%20element%20with%20jq.md)
+- [Verifying existence of a root level element in JSON](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/Verifying%20existence%20of%20a%20root%20level%20element%20with%20jq.md)
 - [insert a very large JSON into a specific location of a sample JSON](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/jq%20-%20Argument%20list%20too%20long%20error%20bash.md)
 - [How to find and replace a value with jq in a nested json](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20find%20and%20replace%20a%20value%20with%20jq%20in%20a%20nested%20json.md)
 - [How to sort/unique JSON output using jq](https://github.com/ldn-softdev/stackoverflow-json/blob/master/lib/How%20to%20sort,unique%20output%20using%20jq.md)
