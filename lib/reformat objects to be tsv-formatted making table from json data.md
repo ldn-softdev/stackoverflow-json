@@ -60,5 +60,10 @@ bash $
 
 If there's a requirement to add a header, it could be done using an additional template:
 ```bash
-bash $ <file.json jtc -J / -nw' ' -T'"NAME\tNODE\tSOURCE IP\tSOURCE PORT\tDESTINATION IP\tDESTINATION PORT\t GATEWAY IP\tGATEWAY PORT"' -w'<host>l:' -qqT'"{$c}\t{$d}\t{$g}\t{$h}\t{$a}\t{$b}\t{$e}\t{$f}"'
+bash $ hdr='"NAME\tNODE\tSOURCE IP\tSOURCE PORT\tDESTINATION IP\tDESTINATION PORT\t GATEWAY IP\tGATEWAY PORT"'
+bash $ echo ${conn_list[@]} | jtc -J / -w' ' -T"$hdr" -w'<host>l:' -qqT'"{$c}\t{$d}\t{$g}\t{$h}\t{$a}\t{$b}\t{$e}\t{$f}"'
+NAME	NODE	SOURCE IP	SOURCE PORT	DESTINATION IP	DESTINATION PORT	 GATEWAY IP	GATEWAY PORT
+mike1	c04	10.244.7.235	38558	129.12.34.567	22	129.23.45.678	11019
+fhlb-test	c04	10.244.7.20	49846	129.98.76.543	22	129.87.65.432	23698
+bash $ 
 ```
