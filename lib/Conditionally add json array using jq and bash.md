@@ -44,7 +44,7 @@ using [`jtc`](https://github.com/ldn-softdev/jtc), it's quite simple:
 ```bash
 bash $ schem='["https"]'
 bash $ 
-bash $ <example.json jtc -w'<>f[schemes][-1]' -i"{\"schemes\":$schem}"
+bash $ <example.json jtc -w'<>f[schemes][-1]' -i'{"schemes":'$schem'}"'
 {
    "dorum": "value3",
    "ipsum": {
@@ -65,5 +65,5 @@ get reinstated at root (thanks to `<>f` lexeme) then the whole object under inse
 
 Naturally, if in-place modification of the source file is required - use `-f` option:
 ```bash
-bash $ jtc -w'<>f[schemes][-1]' -i"{\"schemes\":$schem}" -f example.json
+bash $ jtc -w'<>f[schemes][-1]' -i'{"schemes":'$schem'}"' -f example.json
 ```
